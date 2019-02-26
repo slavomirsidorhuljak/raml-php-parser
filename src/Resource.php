@@ -9,7 +9,7 @@ class Resource implements ArrayInstantiationInterface
 {
     /**
      * The URI of this resource (required)
-     * - Must begin with a "/"
+     * - Must begin with a "/".
      *
      * @see http://raml.org/spec.html#resources-and-nested-resources
      *
@@ -19,7 +19,7 @@ class Resource implements ArrayInstantiationInterface
 
     /**
      * The display name (optional)
-     * - defaults to URI
+     * - defaults to URI.
      *
      * @see http://raml.org/spec.html#display-name
      *
@@ -28,7 +28,7 @@ class Resource implements ArrayInstantiationInterface
     private $displayName;
 
     /**
-     * The description of the resource (optional)
+     * The description of the resource (optional).
      *
      * @see http://raml.org/spec.html#description
      *
@@ -37,7 +37,7 @@ class Resource implements ArrayInstantiationInterface
     private $description;
 
     /**
-     * Override for the Base Uri Parameters
+     * Override for the Base Uri Parameters.
      *
      * @see http://raml.org/spec.html#base-uri-parameters
      *
@@ -46,28 +46,28 @@ class Resource implements ArrayInstantiationInterface
     private $baseUriParameters = [];
 
     /**
-     * List of uri parameters
+     * List of uri parameters.
      *
      * @var NamedParameter[]
      */
     private $uriParameters = [];
 
     /**
-     * A list of security schemes
+     * A list of security schemes.
      *
      * @var SecurityScheme[]
      */
     private $securitySchemes = [];
 
     /**
-     * List of resources under this resource
+     * List of resources under this resource.
      *
      * @var self[]
      */
     private $subResources = [];
 
     /**
-     * List of methods on this resource
+     * List of methods on this resource.
      *
      * @var Method[]
      */
@@ -102,17 +102,18 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Create a Resource from an array
+     * Create a Resource from an array.
      *
      * @param string $uri
      * @param ApiDefinition $apiDefinition
      * @param array $data
-     * [
-     *  uri: string
-     *  displayName: ?string
-     *  description: ?string
-     *  baseUriParameters: ?array
-     * ]
+     *                    [
+     *                    uri: string
+     *                    displayName: ?string
+     *                    description: ?string
+     *                    baseUriParameters: ?array
+     *                    ]
+     *
      * @return self
      */
     public static function createFromArray($uri, array $data = [], ApiDefinition $apiDefinition = null)
@@ -203,7 +204,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Does a uri match this resource
+     * Does a uri match this resource.
      *
      * @param string $uri
      *
@@ -247,7 +248,7 @@ class Resource implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Returns the uri of the resource
+     * Returns the uri of the resource.
      *
      * @return string
      */
@@ -259,7 +260,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Returns the display name of the resource
+     * Returns the display name of the resource.
      *
      * @return string
      */
@@ -269,7 +270,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the display name
+     * Set the display name.
      *
      * @param string $displayName
      */
@@ -281,7 +282,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Gets description
+     * Gets description.
      *
      * @return string
      */
@@ -291,7 +292,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the description
+     * Set the description.
      *
      * @param string $description
      */
@@ -303,7 +304,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the base uri parameters
+     * Get the base uri parameters.
      *
      * @return NamedParameter[]
      */
@@ -313,8 +314,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a new base uri parameter
-     *
+     * Add a new base uri parameter.
      */
     public function addBaseUriParameter(NamedParameter $namedParameter)
     {
@@ -324,7 +324,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the uri parameters
+     * Get the uri parameters.
      *
      * @return NamedParameter[]
      */
@@ -334,8 +334,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a new uri parameter
-     *
+     * Add a new uri parameter.
      */
     public function addUriParameter(NamedParameter $namedParameter)
     {
@@ -345,7 +344,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Returns all the child resources of this resource
+     * Returns all the child resources of this resource.
      *
      * @return array
      */
@@ -355,8 +354,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a resource
-     *
+     * Add a resource.
      */
     public function addResource(self $resource)
     {
@@ -367,8 +365,7 @@ class Resource implements ArrayInstantiationInterface
     // --
 
     /**
-     * Add a method
-     *
+     * Add a method.
      */
     public function addMethod(Method $method)
     {
@@ -381,7 +378,7 @@ class Resource implements ArrayInstantiationInterface
 
     /**
      * Returns an associative array of the methods that this resource supports
-     * where the key is the method type, and the value is an instance of `\Raml\Method`
+     * where the key is the method type, and the value is an instance of `\Raml\Method`.
      *
      * @return \Raml\Method[]
      */
@@ -391,7 +388,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a method by it's method name (get, post,...)
+     * Get a method by it's method name (get, post,...).
      *
      * @param string $method
      *
@@ -411,7 +408,7 @@ class Resource implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the list of security schemes
+     * Get the list of security schemes.
      *
      * @return SecurityScheme[]
      */
@@ -435,6 +432,7 @@ class Resource implements ArrayInstantiationInterface
 
     /**
      * @param TraitDefinition $trait
+     *
      * @return $this
      */
     public function addTrait($trait)

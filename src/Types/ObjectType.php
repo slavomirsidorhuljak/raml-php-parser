@@ -6,7 +6,7 @@ use Raml\ApiDefinition;
 use Raml\Type;
 
 /**
- * ObjectType class
+ * ObjectType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -35,7 +35,7 @@ class ObjectType extends Type
 
     /**
      * A Boolean that indicates if an object instance has additional properties.
-     * Default: true
+     * Default: true.
      *
      * @var bool
      */
@@ -56,15 +56,16 @@ class ObjectType extends Type
      * Requires including a discriminator facet in the type declaration.
      * A valid value is an actual value that might identify the type of an individual object and is unique in the hierarchy of the type.
      * Inline type declarations are not supported.
-     * Default: The name of the type
+     * Default: The name of the type.
      *
      * @var string
      */
     private $discriminatorValue;
 
     /**
-     * @param string $name Type name.
-     * @param array $data Type data.
+     * @param string $name type name
+     * @param array $data type data
+     *
      * @return self
      */
     public static function createFromArray($name, array $data = [])
@@ -107,6 +108,7 @@ class ObjectType extends Type
 
     /**
      * @param string $value
+     *
      * @return bool
      */
     public function discriminate($value)
@@ -123,7 +125,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Properties
+     * Get the value of Properties.
      *
      * @return Type[]
      */
@@ -133,7 +135,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Properties
+     * Set the value of Properties.
      *
      * @return self
      */
@@ -150,10 +152,11 @@ class ObjectType extends Type
     }
 
     /**
-     * Returns a property by name
+     * Returns a property by name.
      *
      * @param string $name
-     * @return null|Type
+     *
+     * @return Type|null
      */
     public function getPropertyByName($name)
     {
@@ -165,7 +168,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Min Properties
+     * Get the value of Min Properties.
      *
      * @return int
      */
@@ -175,9 +178,10 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Min Properties
+     * Set the value of Min Properties.
      *
      * @param int $minProperties
+     *
      * @return self
      */
     public function setMinProperties($minProperties)
@@ -188,7 +192,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Max Properties
+     * Get the value of Max Properties.
      *
      * @return int
      */
@@ -198,9 +202,10 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Max Properties
+     * Set the value of Max Properties.
      *
      * @param int $maxProperties
+     *
      * @return self
      */
     public function setMaxProperties($maxProperties)
@@ -211,8 +216,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Additional Properties
-     *
+     * Get the value of Additional Properties.
      */
     public function getAdditionalProperties()
     {
@@ -220,8 +224,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Additional Properties
-     *
+     * Set the value of Additional Properties.
      *
      * @return self
      */
@@ -233,7 +236,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Discriminator
+     * Get the value of Discriminator.
      *
      * @return string
      */
@@ -243,9 +246,10 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Discriminator
+     * Set the value of Discriminator.
      *
      * @param string $discriminator
+     *
      * @return self
      */
     public function setDiscriminator($discriminator)
@@ -256,7 +260,7 @@ class ObjectType extends Type
     }
 
     /**
-     * Get the value of Discriminator Value
+     * Get the value of Discriminator Value.
      *
      * @return string
      */
@@ -266,9 +270,10 @@ class ObjectType extends Type
     }
 
     /**
-     * Set the value of Discriminator Value
+     * Set the value of Discriminator Value.
      *
      * @param string $discriminatorValue
+     *
      * @return self
      */
     public function setDiscriminatorValue($discriminatorValue)

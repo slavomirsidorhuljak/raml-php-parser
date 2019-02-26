@@ -8,14 +8,14 @@ use Raml\TypeCollection;
 use Raml\TypeInterface;
 
 /**
- * ArrayType class
+ * ArrayType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
 class ArrayType extends Type
 {
     /**
-     * Scalar types which we can validate
+     * Scalar types which we can validate.
      */
     private static $SCALAR_TYPES = [
         'integer',
@@ -58,7 +58,7 @@ class ArrayType extends Type
     private $maxItems = 2147483647;
 
     /**
-     * Create a new ArrayType from an array of data
+     * Create a new ArrayType from an array of data.
      *
      * @param string $name
      *
@@ -120,7 +120,7 @@ class ArrayType extends Type
     }
 
     /**
-     * Get the value of Items
+     * Get the value of Items.
      *
      * @return TypeInterface
      */

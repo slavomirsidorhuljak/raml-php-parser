@@ -14,14 +14,14 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // --
 
     /**
-     * The URI of the Authorization Endpoint as defined in RFC6749 [RFC6748] Section 3.1
+     * The URI of the Authorization Endpoint as defined in RFC6749 [RFC6748] Section 3.1.
      *
      * @var string
      */
     private $authorizationUri;
 
     /**
-     * The URI of the Token Endpoint as defined in RFC6749 [RFC6748] Section 3.2
+     * The URI of the Token Endpoint as defined in RFC6749 [RFC6748] Section 3.2.
      *
      * @var string
      */
@@ -36,7 +36,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     private $authorizationGrants;
 
     /**
-     * A list of scopes supported by the API as defined in RFC6749 [RFC6749] Section 3.3
+     * A list of scopes supported by the API as defined in RFC6749 [RFC6749] Section 3.3.
      *
      * @var string[]
      */
@@ -46,7 +46,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // SecuritySettingsInterface
 
     /**
-     * Flesh out the settings
+     * Flesh out the settings.
      *
      * @param SecuritySettingsInterface $sourceSettings
      *
@@ -89,7 +89,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // ---
 
     /**
-     * Get the Authorization URI
+     * Get the Authorization URI.
      *
      * @return string
      */
@@ -99,7 +99,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Set the Authorization URI
+     * Set the Authorization URI.
      *
      * @param string $authorizationUri
      */
@@ -111,7 +111,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // --
 
     /**
-     * Get the Access Token URI
+     * Get the Access Token URI.
      *
      * @return string
      */
@@ -121,7 +121,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Set the Access Token URI
+     * Set the Access Token URI.
      *
      * @param string $accessTokenUri
      */
@@ -133,7 +133,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // --
 
     /**
-     * Get the list of Authorization Grants
+     * Get the list of Authorization Grants.
      *
      * @return string[]
      */
@@ -143,7 +143,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Add an additional Authorization Grant
+     * Add an additional Authorization Grant.
      *
      * @param string $authorizationGrant
      */
@@ -155,7 +155,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     // --
 
     /**
-     * Set the list of scopes
+     * Set the list of scopes.
      *
      * @return string[]
      */
@@ -165,7 +165,7 @@ class OAuth2SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Add a additional scope
+     * Add a additional scope.
      *
      * @param string $scope
      */

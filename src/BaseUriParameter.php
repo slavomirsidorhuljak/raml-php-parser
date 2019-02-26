@@ -3,14 +3,14 @@
 namespace Raml;
 
 /**
- * Base Uri Parameters
+ * Base Uri Parameters.
  *
  * @see http://raml.org/spec.html#base-uri-parameters
  */
 class BaseUriParameter extends NamedParameter
 {
     /**
-     * Valid types
+     * Valid types.
      *
      * @var array
      */
@@ -23,7 +23,7 @@ class BaseUriParameter extends NamedParameter
     // ---
 
     /**
-     * If the parameter is required (default: true)
+     * If the parameter is required (default: true).
      *
      * @see http://raml.org/spec.html#required
      *

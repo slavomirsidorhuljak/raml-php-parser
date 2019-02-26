@@ -3,14 +3,14 @@
 namespace Raml;
 
 /**
- * A response
+ * A response.
  *
  * @see http://raml.org/spec.html#responses
  */
 class Response implements ArrayInstantiationInterface, MessageSchemaInterface
 {
     /**
-     * The status code of the response
+     * The status code of the response.
      *
      * @see http://raml.org/spec.html#responses
      *
@@ -21,7 +21,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * A list of the bodies of this method
+     * A list of the bodies of this method.
      *
      * @see http://raml.org/spec.html#responses
      *
@@ -30,7 +30,6 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     private $bodyList;
 
     /**
-     *
      * @see http://raml.org/spec.html#headers
      *
      * @var NamedParameter[]
@@ -38,7 +37,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     private $headers;
 
     /**
-     * The description of the response
+     * The description of the response.
      *
      * @see http://raml.org/spec.html#
      *
@@ -49,7 +48,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // ---
 
     /**
-     * Create a new Response
+     * Create a new Response.
      *
      * @param int $statusCode
      */
@@ -61,9 +60,10 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Create a new response object from an array
+     * Create a new response object from an array.
      *
      * @param string $statusCode
+     *
      * @return Response
      */
     public static function createFromArray($statusCode, array $data = [])
@@ -92,7 +92,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Returns the status code
+     * Returns the status code.
      *
      * @return int
      */
@@ -104,12 +104,13 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get the body by type
+     * Get the body by type.
      *
      * @param string $type
-     * @return BodyInterface
      *
      * @throws \InvalidArgumentException
+     *
+     * @return BodyInterface
      */
     public function getBodyByType($type)
     {
@@ -134,7 +135,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Returns all supported types in response
+     * Returns all supported types in response.
      *
      * @return string[]
      */
@@ -144,8 +145,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a new body
-     *
+     * Add a new body.
      */
     public function addBody(BodyInterface $body)
     {
@@ -155,7 +155,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Returns the headers
+     * Returns the headers.
      *
      * @return NamedParameter[]
      */
@@ -165,8 +165,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a new header
-     *
+     * Add a new header.
      */
     public function addHeader(NamedParameter $header)
     {
@@ -176,7 +175,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Returns the description
+     * Returns the description.
      *
      * @return string
      */
@@ -186,7 +185,7 @@ class Response implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Set the description
+     * Set the description.
      *
      * @param string $description
      */

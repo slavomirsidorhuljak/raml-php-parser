@@ -6,7 +6,7 @@ use DateTime;
 use Raml\Type;
 
 /**
- * DatetimeType type class
+ * DatetimeType type class.
  */
 class DatetimeType extends Type
 {
@@ -16,16 +16,17 @@ class DatetimeType extends Type
     const DEFAULT_FORMAT = DATE_RFC3339;
 
     /**
-     * DateTime format to use
+     * DateTime format to use.
      *
      * @var string
      */
     private $format;
 
     /**
-     * Create a new DatetimeType from an array of data
+     * Create a new DatetimeType from an array of data.
      *
      * @param string $name
+     *
      * @return DatetimeType
      */
     public static function createFromArray($name, array $data = [])
@@ -43,7 +44,7 @@ class DatetimeType extends Type
     }
 
     /**
-     * Get the value of Format
+     * Get the value of Format.
      *
      * @return string
      */
@@ -53,7 +54,7 @@ class DatetimeType extends Type
     }
 
     /**
-     * Set the value of Format
+     * Set the value of Format.
      *
      * @param string $format
      *

@@ -5,7 +5,7 @@ namespace Raml;
 interface BodyInterface
 {
     /**
-     * Get the media type of the body
+     * Get the media type of the body.
      *
      * @return string
      */

@@ -7,7 +7,7 @@ use Raml\Type;
 use Raml\TypeCollection;
 
 /**
- * LazyProxyType class for lazy loading datatype objects
+ * LazyProxyType class for lazy loading datatype objects.
  */
 class LazyProxyType extends Type
 {
@@ -32,10 +32,12 @@ class LazyProxyType extends Type
     }
 
     /**
-     * Magic method to proxy all method calls to original object
-     * @param string $name Name of called method.
-     * @param array $params Parameters of called method.
-     * @return mixed Returns whatever the actual method returns.
+     * Magic method to proxy all method calls to original object.
+     *
+     * @param string $name name of called method
+     * @param array $params parameters of called method
+     *
+     * @return mixed returns whatever the actual method returns
      */
     public function __call($name, $params)
     {
@@ -45,13 +47,14 @@ class LazyProxyType extends Type
     }
 
     /**
-     * Create a new LazyProxyType from an array of data
+     * Create a new LazyProxyType from an array of data.
      *
-     * @param string $name Type name.
-     * @param array $data Type data.
-     * @return LazyProxyType
+     * @param string $name type name
+     * @param array $data type data
      *
      * @throws \InvalidArgumentException
+     *
+     * @return LazyProxyType
      */
     public static function createFromArray($name, array $data = [])
     {
@@ -74,6 +77,7 @@ class LazyProxyType extends Type
 
     /**
      * @param string $value
+     *
      * @return bool
      */
     public function discriminate($value)

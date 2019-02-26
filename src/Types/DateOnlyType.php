@@ -5,7 +5,7 @@ namespace Raml\Types;
 use Raml\Type;
 
 /**
- * DateOnlyType class
+ * DateOnlyType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -17,12 +17,12 @@ class DateOnlyType extends Type
     const FORMAT = 'Y-m-d';
 
     /**
-    * Create a new DateOnlyType from an array of data
-    *
-    * @param string    $name
-    *
-    * @return DateOnlyType
-    */
+     * Create a new DateOnlyType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return DateOnlyType
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);

@@ -24,7 +24,7 @@ class SymfonyRouteFormatter implements RouteFormatterInterface
      * append a trailing slash to the final routes or not.
      *
      * @param bool $addTrailingSlash
-     *  By default this is true
+     *                               By default this is true
      */
     public function __construct(RouteCollection $routes, $addTrailingSlash = true)
     {
@@ -40,8 +40,8 @@ class SymfonyRouteFormatter implements RouteFormatterInterface
      * into the Symfony Route Collection, and set the corresponding method.
      *
      * @param BasicRoute[] $resources
-     *  Associative array where the key is the method and full path, and the value contains
-     *  the path, method type (GET/POST etc.) and then the Raml\Method object
+     *                                Associative array where the key is the method and full path, and the value contains
+     *                                the path, method type (GET/POST etc.) and then the Raml\Method object
      *
      * @return array
      */
@@ -83,7 +83,7 @@ class SymfonyRouteFormatter implements RouteFormatterInterface
     }
 
     /**
-     * {inheritDoc}
+     * {inheritDoc}.
      */
     public function getRoutes()
     {

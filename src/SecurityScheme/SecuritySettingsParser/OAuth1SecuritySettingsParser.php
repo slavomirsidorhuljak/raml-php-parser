@@ -11,14 +11,14 @@ class OAuth1SecuritySettingsParser implements SecuritySettingsParserInterface
     // SecuritySettingsParserInterface
 
     /**
-     * Create a new OAuth1 Security Settings Object from array data
+     * Create a new OAuth1 Security Settings Object from array data.
      *
      * @param array $data
-     * [
-     *  requestTokenUri:     ?string
-     *  authorizationUri:    ?string
-     *  tokenCredentialsUri: ?string
-     * ]
+     *                    [
+     *                    requestTokenUri:     ?string
+     *                    authorizationUri:    ?string
+     *                    tokenCredentialsUri: ?string
+     *                    ]
      *
      * @return OAuth1SecuritySettings
      */
@@ -28,7 +28,7 @@ class OAuth1SecuritySettingsParser implements SecuritySettingsParserInterface
     }
 
     /**
-     * Get a list of supported types
+     * Get a list of supported types.
      *
      * @return array
      */

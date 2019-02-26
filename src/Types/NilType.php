@@ -3,7 +3,7 @@
 namespace Raml\Types;
 
 /**
- * NilType class
+ * NilType class.
  *
  * @author Grigoriy Borozdin <g.borozdin@elama.ru>
  */

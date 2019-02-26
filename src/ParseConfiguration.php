@@ -14,21 +14,21 @@ class ParseConfiguration
 
     /**
      * Should schemas be parsed
-     * This is most likely wanted, but does increase time
+     * This is most likely wanted, but does increase time.
      *
      * @var bool
      */
     private $parseSchemas = true;
 
     /**
-     * Should security schemes be merged
+     * Should security schemes be merged.
      *
      * @var bool
      */
     private $parseSecuritySchemes = true;
 
     /**
-     * Enable inclusion of Remote resources, i.e. RAML files from web
+     * Enable inclusion of Remote resources, i.e. RAML files from web.
      *
      * @var bool
      */
@@ -37,7 +37,7 @@ class ParseConfiguration
     // ----
 
     /**
-     * Enable directory traversal
+     * Enable directory traversal.
      */
     public function enableDirectoryTraversal()
     {
@@ -45,7 +45,7 @@ class ParseConfiguration
     }
 
     /**
-     * Disable directory traversal
+     * Disable directory traversal.
      */
     public function disableDirectoryTraversal()
     {
@@ -53,7 +53,7 @@ class ParseConfiguration
     }
 
     /**
-     * If directory tree traversal is allowed
+     * If directory tree traversal is allowed.
      *
      * @return bool
      */
@@ -65,7 +65,7 @@ class ParseConfiguration
     // ---
 
     /**
-     * Enable schema parsing
+     * Enable schema parsing.
      */
     public function enableSchemaParsing()
     {
@@ -73,7 +73,7 @@ class ParseConfiguration
     }
 
     /**
-     * Disable schema parsing
+     * Disable schema parsing.
      */
     public function disableSchemaParsing()
     {
@@ -81,7 +81,7 @@ class ParseConfiguration
     }
 
     /**
-     * Is schema parsing enabled
+     * Is schema parsing enabled.
      *
      * @return bool
      */
@@ -93,7 +93,7 @@ class ParseConfiguration
     // ---
 
     /**
-     * Enable security scheme parsing
+     * Enable security scheme parsing.
      */
     public function enableSecuritySchemeParsing()
     {
@@ -101,7 +101,7 @@ class ParseConfiguration
     }
 
     /**
-     * Disable security scheme parsing
+     * Disable security scheme parsing.
      */
     public function disableSecuritySchemeParsing()
     {
@@ -109,7 +109,7 @@ class ParseConfiguration
     }
 
     /**
-     * Is security scheme parsing enabled
+     * Is security scheme parsing enabled.
      *
      * @return bool
      */

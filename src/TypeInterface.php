@@ -3,7 +3,7 @@
 namespace Raml;
 
 /**
- * Interface for RAML types
+ * Interface for RAML types.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -15,7 +15,7 @@ interface TypeInterface extends ValidatorInterface
     public function getName();
 
     /**
-     * Returns true if type discriminator matched discriminatorValue for class
+     * Returns true if type discriminator matched discriminatorValue for class.
      */
     public function discriminate($value);
 }

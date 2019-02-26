@@ -37,6 +37,7 @@ class ValidatorSchemaHelper
      * @param string $method
      * @param string $path
      * @param bool $requiredOnly
+     *
      * @return NamedParameter[]
      */
     public function getQueryParameters($method, $path, $requiredOnly = false)
@@ -60,6 +61,7 @@ class ValidatorSchemaHelper
      * @param string $method
      * @param string $path
      * @param string $contentType
+     *
      * @return Body
      */
     public function getRequestBody($method, $path, $contentType)
@@ -72,6 +74,7 @@ class ValidatorSchemaHelper
     /**
      * @param string $method
      * @param string $path
+     *
      * @return Response[]
      */
     public function getResponses($method, $path)
@@ -83,8 +86,10 @@ class ValidatorSchemaHelper
      * @param string $method
      * @param string $path
      * @param int $statusCode
-     * @return Response
+     *
      * @throws ValidatorSchemaException
+     *
+     * @return Response
      */
     public function getResponse($method, $path, $statusCode)
     {
@@ -107,6 +112,7 @@ class ValidatorSchemaHelper
      * @param string $path
      * @param int $statusCode
      * @param string $contentType
+     *
      * @return Body
      */
     public function getResponseBody($method, $path, $statusCode, $contentType)
@@ -121,6 +127,7 @@ class ValidatorSchemaHelper
      * @param string $path
      * @param int $statusCode
      * @param bool $requiredOnly
+     *
      * @return NamedParameter[]
      */
     public function getResponseHeaders($method, $path, $statusCode, $requiredOnly = false)
@@ -144,9 +151,11 @@ class ValidatorSchemaHelper
      * @param string $method
      * @param string $path
      * @param string $contentType
-     * @return Body
+     *
      * @throws EmptyBodyException
      * @throws ValidatorSchemaException
+     *
+     * @return Body
      */
     private function getBody(MessageSchemaInterface $schema, $method, $path, $contentType)
     {
@@ -180,8 +189,10 @@ class ValidatorSchemaHelper
 
     /**
      * @param string $path
-     * @return resource
+     *
      * @throws ValidatorSchemaException
+     *
+     * @return resource
      */
     private function getResource($path)
     {
@@ -200,8 +211,10 @@ class ValidatorSchemaHelper
     /**
      * @param string $method
      * @param string $path
-     * @return Method
+     *
      * @throws ValidatorSchemaException
+     *
+     * @return Method
      */
     private function getMethod($method, $path)
     {

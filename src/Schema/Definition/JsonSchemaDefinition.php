@@ -10,7 +10,7 @@ use Raml\Types\TypeValidationError;
 final class JsonSchemaDefinition implements SchemaDefinitionInterface
 {
     /**
-     * The JSON schema
+     * The JSON schema.
      *
      * @var \stdClass
      */
@@ -19,8 +19,7 @@ final class JsonSchemaDefinition implements SchemaDefinitionInterface
     private $errors = [];
 
     /**
-     * Create a JSON Schema definition
-     *
+     * Create a JSON Schema definition.
      */
     public function __construct(\stdClass $json)
     {
@@ -28,7 +27,7 @@ final class JsonSchemaDefinition implements SchemaDefinitionInterface
     }
 
     /**
-     * Returns the JSON schema as a string
+     * Returns the JSON schema as a string.
      *
      * @return string
      */
@@ -39,8 +38,7 @@ final class JsonSchemaDefinition implements SchemaDefinitionInterface
 
     /**
      * Validate a JSON string against the schema
-     * - Converts the string into a JSON object then uses the JsonSchema Validator to validate
-     *
+     * - Converts the string into a JSON object then uses the JsonSchema Validator to validate.
      */
     public function validate($value)
     {
@@ -57,7 +55,7 @@ final class JsonSchemaDefinition implements SchemaDefinitionInterface
     }
 
     /**
-     * Returns the JSON Schema as a \stdClass
+     * Returns the JSON Schema as a \stdClass.
      *
      * @return \stdClass
      */
@@ -67,7 +65,7 @@ final class JsonSchemaDefinition implements SchemaDefinitionInterface
     }
 
     /**
-     * Returns the JSON Schema as an array
+     * Returns the JSON Schema as an array.
      *
      * @return array
      */

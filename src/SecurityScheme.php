@@ -5,14 +5,14 @@ namespace Raml;
 use Raml\SecurityScheme\SecuritySchemeDescribedBy;
 
 /**
- * Security scheme
+ * Security scheme.
  *
  * @see http://raml.org/spec.html#declaration
  */
 class SecurityScheme implements ArrayInstantiationInterface
 {
     /**
-     * The key of the security scheme
+     * The key of the security scheme.
      *
      * @var string
      */
@@ -21,7 +21,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     // --
 
     /**
-     * The description of the security schema
+     * The description of the security schema.
      *
      * @see http://raml.org/spec.html#description
      *
@@ -30,7 +30,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     private $description;
 
     /**
-     * The type of the security schema (optional)
+     * The type of the security schema (optional).
      *
      * @see http://raml.org/spec.html#type
      *
@@ -39,7 +39,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     private $type;
 
     /**
-     * The structure of the request
+     * The structure of the request.
      *
      * @see http://raml.org/spec.html#describedby
      *
@@ -48,7 +48,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     private $describedBy;
 
     /**
-     * The security settings
+     * The security settings.
      *
      * @see http://raml.org/spec.html#settings
      *
@@ -59,7 +59,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Create a new security scheme
+     * Create a new security scheme.
      *
      * @param string $key
      */
@@ -69,16 +69,16 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Create a security scheme from an array
+     * Create a security scheme from an array.
      *
      * @param string $key
      * @param array $data
-     * [
-     *  description: ?string
-     *  type:        ?string
-     *  describedBy: ?string[]
-     *  settings:    ?object[]
-     * ]
+     *                    [
+     *                    description: ?string
+     *                    type:        ?string
+     *                    describedBy: ?string[]
+     *                    settings:    ?object[]
+     *                    ]
      * @param ApiDefinition $apiDefinition
      *
      * @return SecurityScheme
@@ -109,7 +109,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the key of the security setting
+     * Get the key of the security setting.
      *
      * @return string
      */
@@ -121,7 +121,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Get the description of the security scheme
+     * Get the description of the security scheme.
      *
      * @return string
      */
@@ -131,7 +131,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the description of the security scheme
+     * Set the description of the security scheme.
      *
      * @param string $description
      */
@@ -143,7 +143,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the type of the security scheme
+     * Get the type of the security scheme.
      *
      * @return string
      */
@@ -153,7 +153,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the type of the security scheme
+     * Set the type of the security scheme.
      *
      * @param string $type
      */
@@ -165,7 +165,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the implementation details of the security scheme
+     * Get the implementation details of the security scheme.
      *
      * @return SecuritySchemeDescribedBy
      */
@@ -175,8 +175,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the implementation details of the security scheme
-     *
+     * Set the implementation details of the security scheme.
      */
     public function setDescribedBy(SecuritySchemeDescribedBy $describedBy)
     {
@@ -186,9 +185,9 @@ class SecurityScheme implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Get the settings of the security scheme
+     * Get the settings of the security scheme.
      *
-     * @return object|array
+     * @return array|object
      */
     public function getSettings()
     {
@@ -196,9 +195,9 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the settings for the security scheme
+     * Set the settings for the security scheme.
      *
-     * @param object|array $settings
+     * @param array|object $settings
      */
     public function setSettings($settings)
     {
@@ -206,7 +205,7 @@ class SecurityScheme implements ArrayInstantiationInterface
     }
 
     /**
-     * Update settings with a new array
+     * Update settings with a new array.
      *
      * @param array $newSettings
      */

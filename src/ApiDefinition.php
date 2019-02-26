@@ -16,7 +16,7 @@ use Raml\Types\UnionType;
 use Raml\Utility\StringTransformer;
 
 /**
- * The API Definition
+ * The API Definition.
  *
  * @see http://raml.org/spec.html
  */
@@ -33,7 +33,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     const PROTOCOL_HTTPS = 'HTTPS';
 
     /**
-     * The API Title (required)
+     * The API Title (required).
      *
      * @see http://raml.org/spec.html#api-title
      *
@@ -42,7 +42,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $title;
 
     /**
-     * The API Version (optional)
+     * The API Version (optional).
      *
      * @see http://raml.org/spec.html#api-version
      *
@@ -51,7 +51,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $version;
 
     /**
-     * The Base URL (optional for development, required in production)
+     * The Base URL (optional for development, required in production).
      *
      * @see http://raml.org/spec.html#base-uri-and-baseuriparameters
      *
@@ -60,7 +60,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $baseUri;
 
     /**
-     * Prefix to prepend all urls
+     * Prefix to prepend all urls.
      *
      * @var string
      */
@@ -69,7 +69,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     /**
      * Parameters defined in the Base URI
      * - There appears to be a bug in the RAML 0.8 spec related to this,
-     * however the baseUriParameters appears to be correct
+     * however the baseUriParameters appears to be correct.
      *
      * @see http://raml.org/spec.html#base-uri-and-baseuriparameters
      * @see http://raml.org/spec.html#uri-parameters
@@ -79,7 +79,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $baseUriParameters = [];
 
     /**
-     * The supported protocols (default to protocol on baseUrl)
+     * The supported protocols (default to protocol on baseUrl).
      *
      * @see http://raml.org/spec.html#protocols
      *
@@ -89,12 +89,12 @@ class ApiDefinition implements ArrayInstantiationInterface
 
     /**
      * The default media type (optional)
-     * - text/yaml
-     * - text/x-yaml
-     * - application/yaml
+     *  - text/yaml
+     *  - text/x-yaml
+     *  - application/yaml
      *  - application/x-yaml
      *  - Any type from the list of IANA MIME Media Types, http://www.iana.org/assignments/media-types
-     *  - A custom type that conforms to the regular expression, "application\/[A-Za-z.-0-1]*+?(json|xml)"
+     *  - A custom type that conforms to the regular expression, "application\/[A-Za-z.-0-1]*+?(json|xml)".
      *
      * @see http://raml.org/spec.html#default-media-type
      *
@@ -103,9 +103,9 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $defaultMediaTypes;
 
     /**
-     * The schemas the API supplies defined in the root (optional)
+     * The schemas the API supplies defined in the root (optional).
      *
-     * @deprecated Replaced by types element.
+     * @deprecated replaced by types element
      * @see http://raml.org/spec.html#schemas
      *
      * @var array[]
@@ -113,7 +113,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $schemaCollections = [];
 
     /**
-     * The documentation for the API (optional)
+     * The documentation for the API (optional).
      *
      * @see http://raml.org/spec.html#user-documentation
      *
@@ -123,7 +123,7 @@ class ApiDefinition implements ArrayInstantiationInterface
 
     /**
      * The resources the API supplies
-     * {/*}
+     * {/*}.
      *
      * @see http://raml.org/spec.html#resources-and-nested-resources
      *
@@ -132,7 +132,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $resources = [];
 
     /**
-     * A list of security schemes
+     * A list of security schemes.
      *
      * @see http://raml.org/spec.html#declaration
      *
@@ -141,32 +141,32 @@ class ApiDefinition implements ArrayInstantiationInterface
     private $securitySchemes = [];
 
     /**
-     * A list of security schemes that the whole API is secured by
+     * A list of security schemes that the whole API is secured by.
      *
-     * @link http://raml.org/spec.html#usage-applying-a-security-scheme-to-an-api
+     * @see http://raml.org/spec.html#usage-applying-a-security-scheme-to-an-api
      *
      * @var SecurityScheme[]
      */
     private $securedBy = [];
 
     /**
-     * A list of data types
+     * A list of data types.
      *
-     * @link https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#raml-data-types
+     * @see https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#raml-data-types
      *
      * @var TypeCollection
      */
     private $types;
 
     /**
-     * A list of traits
+     * A list of traits.
      *
      * @var TraitCollection
      */
     private $traits;
 
     /**
-     * Create a new API Definition
+     * Create a new API Definition.
      *
      * @param string $title
      */
@@ -183,21 +183,21 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Create a new API Definition from an array
+     * Create a new API Definition from an array.
      *
      * @param string $title
      * @param array $data
-     * [
-     *  title:              string
-     *  version:            ?string
-     *  baseUrl:            ?string
-     *  baseUriParameters:  ?array
-     *  protocols:          ?array
-     *  defaultMediaType:   ?string
-     *  schemas:            ?array
-     *  securitySchemes:    ?array
-     *  documentation:      ?array
-     * ]
+     *                    [
+     *                    title:              string
+     *                    version:            ?string
+     *                    baseUrl:            ?string
+     *                    baseUriParameters:  ?array
+     *                    protocols:          ?array
+     *                    defaultMediaType:   ?string
+     *                    schemas:            ?array
+     *                    securitySchemes:    ?array
+     *                    documentation:      ?array
+     *                    ]
      *
      * @return ApiDefinition
      */
@@ -314,12 +314,13 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a resource by a uri
+     * Get a resource by a uri.
      *
      * @param string $uri
-     * @return resource
      *
      * @throws ResourceNotFoundException
+     *
+     * @return resource
      */
     public function getResourceByUri($uri)
     {
@@ -338,12 +339,13 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a resource by a path
+     * Get a resource by a path.
      *
      * @param string $path
-     * @return resource
      *
      * @throws ResourceNotFoundException
+     *
+     * @return resource
      */
     public function getResourceByPath($path)
     {
@@ -361,13 +363,14 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Returns all the resources as a URI, essentially documenting the entire API Definition.
-     * This will output, by default, an array that looks like:
+     * Returns all the resources as a URI essentially documenting the entire API Definition.
      *
-     * GET /songs => [/songs, GET, Raml\Method]
-     * GET /songs/{songId} => [/songs/{songId}, GET, Raml\Method]
+     * This will output, by default, an array that looks like:
+     *      GET /songs => [/songs, GET, Raml\Method]
+     *      GET /songs/{songId} => [/songs/{songId}, GET, Raml\Method].
      *
      * @param RouteFormatterInterface $formatter
+     *
      * @return RouteFormatterInterface
      */
     public function getResourcesAsUri(RouteFormatterInterface $formatter = null)
@@ -383,6 +386,7 @@ class ApiDefinition implements ArrayInstantiationInterface
 
     /**
      * @param resource[] $resources
+     *
      * @return resource[]
      */
     private function getResourcesAsArray($resources)
@@ -436,7 +440,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the base uri parameters
+     * Get the base uri parameters.
      *
      * @return NamedParameter[]
      */
@@ -446,8 +450,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a new base uri parameter
-     *
+     * Add a new base uri parameter.
      */
     public function addBaseUriParameter(NamedParameter $namedParameter)
     {
@@ -488,6 +491,7 @@ class ApiDefinition implements ArrayInstantiationInterface
 
     /**
      * @param string $protocol
+     *
      * @throws \InvalidArgumentException
      */
     private function addProtocol($protocol)
@@ -502,7 +506,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the default media type
+     * Get the default media type.
      *
      * @return string[]
      */
@@ -512,7 +516,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Set a default media type
+     * Set a default media type.
      *
      * @param string $defaultMediaType
      */
@@ -525,7 +529,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the schemas defined in the root of the API
+     * Get the schemas defined in the root of the API.
      *
      * @return TypeCollection
      */
@@ -535,10 +539,10 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add an schema
+     * Add an schema.
      *
      * @param string $collectionName
-     * @param array  $schemas
+     * @param array $schemas
      */
     public function addSchemaCollection($collectionName, $schemas)
     {
@@ -550,11 +554,11 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a new schema to a collection
+     * Add a new schema to a collection.
      *
      * @param string $collectionName
      * @param string $schemaName
-     * @param string|SchemaDefinitionInterface $schema
+     * @param SchemaDefinitionInterface|string $schema
      *
      * @throws InvalidSchemaDefinitionException
      */
@@ -568,7 +572,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the documentation of the API
+     * Get the documentation of the API.
      *
      * @return array
      */
@@ -578,7 +582,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a piece of documentation to the documentation list
+     * Add a piece of documentation to the documentation list.
      *
      * @param string $title
      * @param string $documentation
@@ -608,13 +612,14 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Determines the right Type and returns an instance
+     * Determines the right Type and returns an instance.
      *
-     * @param string $name Name of type.
-     * @param array $definition Definition of type.
-     * @return Type Returns a (best) matched type object.
+     * @param string $name name of type
+     * @param array $definition definition of type
      *
      * @throws \InvalidArgumentException
+     *
+     * @return Type returns a (best) matched type object
      */
     public static function determineType($name, $definition)
     {
@@ -662,6 +667,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     /**
      * @param string $name
      * @param array $definition
+     *
      * @return TraitDefinition
      */
     public static function determineTrait($name, $definition)
@@ -670,8 +676,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add data type
-     *
+     * Add data type.
      */
     public function addType(TypeInterface $type)
     {
@@ -679,7 +684,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get data types
+     * Get data types.
      *
      * @return TypeCollection
      */
@@ -689,8 +694,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add trait
-     *
+     * Add trait.
      */
     public function addTrait(TraitDefinition $trait)
     {
@@ -698,7 +702,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get data types
+     * Get data types.
      *
      * @return TraitCollection
      */
@@ -708,7 +712,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the resources tree
+     * Get the resources tree.
      *
      * @return resource[]
      */
@@ -718,8 +722,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add an additional resource
-     *
+     * Add an additional resource.
      */
     public function addResource(Resource $resource)
     {
@@ -727,8 +730,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Removes Resource from ApiDefinition
-     *
+     * Removes Resource from ApiDefinition.
      */
     public function removeResource(Resource $resource)
     {
@@ -739,7 +741,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a security scheme by it's name
+     * Get a security scheme by it's name.
      *
      * @param string $schemeName
      *
@@ -751,8 +753,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add an additional security scheme
-     *
+     * Add an additional security scheme.
      */
     public function addSecurityScheme(SecurityScheme $securityScheme)
     {
@@ -760,7 +761,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a list of security schemes that the whole API is secured by
+     * Get a list of security schemes that the whole API is secured by.
      *
      * @return SecurityScheme[]
      */
@@ -770,8 +771,7 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Add an additional security scheme to the list of schemes the whole API is secured by
-     *
+     * Add an additional security scheme to the list of schemes the whole API is secured by.
      */
     public function addSecuredBy(SecurityScheme $securityScheme)
     {
@@ -779,12 +779,13 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * Recursive function that generates a flat array of the entire API Definition
+     * Recursive function that generates a flat array of the entire API Definition.
      *
      * GET /songs => [api.example.org, /songs, GET, [https], Raml\Method]
      * GET /songs/{songId} => [api.example.org, /songs/{songId}, GET, [https], Raml\Method]
      *
      * @param resource[] $resources
+     *
      * @return BasicRoute[]
      */
     private function getMethodsAsArray(array $resources)

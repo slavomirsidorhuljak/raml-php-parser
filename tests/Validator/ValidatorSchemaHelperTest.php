@@ -23,6 +23,7 @@ class ValidatorSchemaHelperTest extends TestCase
 
     /**
      * @param string $fixturePath
+     *
      * @return ValidatorSchemaHelper
      */
     public function getHelperForSchema($fixturePath)

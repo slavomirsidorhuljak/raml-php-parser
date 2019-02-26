@@ -7,7 +7,7 @@ use JsonSchema\Uri\UriRetriever;
 use Raml\Exception\InvalidJsonException;
 
 /**
- * Fetches JSON schema as a string, included refs
+ * Fetches JSON schema as a string, included refs.
  */
 class JsonSchemaFileLoader implements FileLoaderInterface
 {
@@ -25,7 +25,7 @@ class JsonSchemaFileLoader implements FileLoaderInterface
     }
 
     /**
-     * Load a json from a path and resolve references
+     * Load a json from a path and resolve references.
      *
      * @param string $filePath
      *
@@ -47,7 +47,7 @@ class JsonSchemaFileLoader implements FileLoaderInterface
     }
 
     /**
-     * Get the list of supported extensions
+     * Get the list of supported extensions.
      *
      * @return string[]
      */

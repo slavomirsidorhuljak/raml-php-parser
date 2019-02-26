@@ -5,7 +5,7 @@ namespace Raml\Types;
 use Raml\Type;
 
 /**
- * TimeOnlyType class
+ * TimeOnlyType class.
  */
 class TimeOnlyType extends Type
 {
@@ -15,9 +15,10 @@ class TimeOnlyType extends Type
     const FORMAT = 'H:i:s';
 
     /**
-     * Create a new TimeOnlyType from an array of data
+     * Create a new TimeOnlyType from an array of data.
      *
      * @param string $name
+     *
      * @return TimeOnlyType
      */
     public static function createFromArray($name, array $data = [])

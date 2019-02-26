@@ -8,7 +8,7 @@ use Raml\Schema\SchemaParserAbstract;
 class XmlSchemaParser extends SchemaParserAbstract
 {
     /**
-     * List of known XML content types
+     * List of known XML content types.
      *
      * @var array
      */
@@ -19,7 +19,7 @@ class XmlSchemaParser extends SchemaParserAbstract
     ];
 
     /**
-     * Create a new XML Schema definition from a string
+     * Create a new XML Schema definition from a string.
      *
      * @param string $schemaString
      *

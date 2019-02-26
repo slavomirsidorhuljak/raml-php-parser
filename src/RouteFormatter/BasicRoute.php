@@ -7,21 +7,21 @@ use Raml\Method;
 class BasicRoute
 {
     /**
-     * The base URL for the route
+     * The base URL for the route.
      *
      * @var string
      */
     private $baseUrl;
 
     /**
-     * The full uri of the route
+     * The full uri of the route.
      *
      * @var string
      */
     private $uri;
 
     /**
-     * The protocol(s) of the routes
+     * The protocol(s) of the routes.
      *
      * @var array
      */
@@ -29,7 +29,7 @@ class BasicRoute
 
     /**
      * The verb of the Route
-     * [GET, POST, PUT, PATCH, DELETE]
+     * [GET, POST, PUT, PATCH, DELETE].
      *
      * @var string
      */
@@ -43,7 +43,7 @@ class BasicRoute
     private $uriParameters;
 
     /**
-     * The Method definition
+     * The Method definition.
      *
      * @var Method
      */
@@ -52,7 +52,7 @@ class BasicRoute
     // ---
 
     /**
-     * Create a new basic route
+     * Create a new basic route.
      *
      * @param string $baseUrl
      * @param string $uri
@@ -73,7 +73,7 @@ class BasicRoute
     // --
 
     /**
-     * Gets the base URL of the route
+     * Gets the base URL of the route.
      *
      * @return string
      */
@@ -83,7 +83,7 @@ class BasicRoute
     }
 
     /**
-     * Get the URI of the route
+     * Get the URI of the route.
      *
      * @return string
      */
@@ -93,7 +93,7 @@ class BasicRoute
     }
 
     /**
-     * Gets the Protocols of the route
+     * Gets the Protocols of the route.
      *
      * @return array
      */
@@ -103,7 +103,7 @@ class BasicRoute
     }
 
     /**
-     * Get the method string of the route
+     * Get the method string of the route.
      *
      * @return string
      */
@@ -113,7 +113,7 @@ class BasicRoute
     }
 
     /**
-     * Gets the URI parameters of the route
+     * Gets the URI parameters of the route.
      *
      * @return array
      */
@@ -123,7 +123,7 @@ class BasicRoute
     }
 
     /**
-     * Get the Method definition
+     * Get the Method definition.
      *
      * @return Method
      */

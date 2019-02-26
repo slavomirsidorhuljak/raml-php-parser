@@ -13,7 +13,7 @@ class NoRouteFormatter implements RouteFormatterInterface
     // RouteFormatterInterface
 
     /**
-     * Format an array of basic routes into an array of arrays
+     * Format an array of basic routes into an array of arrays.
      *
      * @param BasicRoute[] $resources
      *
@@ -35,13 +35,13 @@ class NoRouteFormatter implements RouteFormatterInterface
     }
 
     /**
-     * Get the routes
+     * Get the routes.
      *
      * @return array [[
-     *  path:   string
-     *  type:   string
-     *  method: \Raml\Method
-     * ]]
+     *               path:   string
+     *               type:   string
+     *               method: \Raml\Method
+     *               ]]
      */
     public function getRoutes()
     {

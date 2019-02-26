@@ -5,7 +5,7 @@ namespace Raml\Types;
 use Raml\Type;
 
 /**
- * StringType class
+ * StringType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -20,7 +20,7 @@ class StringType extends Type
 
     /**
      * Minimum length of the string. Value MUST be equal to or greater than 0.
-     * Default: 0
+     * Default: 0.
      *
      * @var int
      */
@@ -28,19 +28,19 @@ class StringType extends Type
 
     /**
      * Maximum length of the string. Value MUST be equal to or greater than 0.
-     * Default: 2147483647
+     * Default: 2147483647.
      *
      * @var int
      */
     private $maxLength;
 
     /**
-    * Create a new StringType from an array of data
-    *
-    * @param string    $name
-    *
-    * @return StringType
-    */
+     * Create a new StringType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return StringType
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);
@@ -67,8 +67,7 @@ class StringType extends Type
     }
 
     /**
-     * Get the value of Pattern
-     *
+     * Get the value of Pattern.
      */
     public function getPattern()
     {
@@ -76,8 +75,7 @@ class StringType extends Type
     }
 
     /**
-     * Set the value of Pattern
-     *
+     * Set the value of Pattern.
      *
      * @return self
      */
@@ -89,8 +87,7 @@ class StringType extends Type
     }
 
     /**
-     * Get the value of Min Length
-     *
+     * Get the value of Min Length.
      */
     public function getMinLength()
     {
@@ -98,8 +95,7 @@ class StringType extends Type
     }
 
     /**
-     * Set the value of Min Length
-     *
+     * Set the value of Min Length.
      *
      * @return self
      */
@@ -111,8 +107,7 @@ class StringType extends Type
     }
 
     /**
-     * Get the value of Max Length
-     *
+     * Get the value of Max Length.
      */
     public function getMaxLength()
     {
@@ -120,8 +115,7 @@ class StringType extends Type
     }
 
     /**
-     * Set the value of Max Length
-     *
+     * Set the value of Max Length.
      *
      * @return self
      */

@@ -7,14 +7,14 @@ use Raml\Schema\SchemaDefinitionInterface;
 use Raml\Types\ObjectType;
 
 /**
- * A body
+ * A body.
  *
  * @see http://raml.org/spec.html#body
  */
 class Body implements BodyInterface, ArrayInstantiationInterface
 {
     /**
-     * The description of the method (optional)
+     * The description of the method (optional).
      *
      * @see http://raml.org/spec.html#description
      *
@@ -23,7 +23,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     private $description;
 
     /**
-     * The media type of the body
+     * The media type of the body.
      *
      * @see http://raml.org/spec.html#body
      *
@@ -34,7 +34,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // --
 
     /**
-     * The schema of the body
+     * The schema of the body.
      *
      * @see http://raml.org/spec.html#schema
      *
@@ -43,7 +43,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     private $schema;
 
     /**
-     * The type of the body
+     * The type of the body.
      *
      * @see http://raml.org/spec.html#raml-data-types
      *
@@ -52,7 +52,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     private $type;
 
     /**
-     * A list of examples
+     * A list of examples.
      *
      * @see http://raml.org/spec.html#schema
      *
@@ -63,7 +63,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // ---
 
     /**
-     * Create a new body
+     * Create a new body.
      *
      * @param string $mediaType
      *
@@ -79,16 +79,17 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Create a new body from an array
+     * Create a new body from an array.
      *
      * @param string $mediaType
      * @param array $data
-     * [
-     *  type:       ?string
-     *  schema:     ?string
-     *  example:    ?string
-     *  examples:   ?array
-     * ]
+     *                    [
+     *                    type:       ?string
+     *                    schema:     ?string
+     *                    example:    ?string
+     *                    examples:   ?array
+     *                    ]
+     *
      * @return self
      */
     public static function createFromArray($mediaType, array $data = [])
@@ -127,7 +128,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Get the media type
+     * Get the media type.
      *
      * @return string
      */
@@ -139,7 +140,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // --
 
     /**
-     * Get the description
+     * Get the description.
      *
      * @return string
      */
@@ -149,7 +150,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Set the description
+     * Set the description.
      *
      * @param string $description
      */
@@ -161,7 +162,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // --
 
     /**
-     * Get the schema
+     * Get the schema.
      *
      * @return SchemaDefinitionInterface|string
      */
@@ -171,7 +172,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Get validator, either type or schema, with type having more priority
+     * Get validator, either type or schema, with type having more priority.
      *
      * @return ValidatorInterface
      */
@@ -181,7 +182,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Set the schema
+     * Set the schema.
      *
      * @param SchemaDefinitionInterface|string $schema
      *
@@ -199,7 +200,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // --
 
     /**
-     * Get the type
+     * Get the type.
      *
      * @return TypeInterface
      */
@@ -209,8 +210,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Set the type
-     *
+     * Set the type.
      *
      * @throws \Exception Throws exception when type does not parse
      */
@@ -222,7 +222,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     // --
 
     /**
-     * Get the example
+     * Get the example.
      *
      * @return string
      */
@@ -232,7 +232,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Get the list of examples
+     * Get the list of examples.
      *
      * @return string[]
      */
@@ -242,7 +242,7 @@ class Body implements BodyInterface, ArrayInstantiationInterface
     }
 
     /**
-     * Add an example
+     * Add an example.
      *
      * @param string $example
      */

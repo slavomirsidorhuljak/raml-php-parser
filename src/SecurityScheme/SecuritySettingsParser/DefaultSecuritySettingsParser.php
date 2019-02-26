@@ -11,8 +11,7 @@ class DefaultSecuritySettingsParser implements SecuritySettingsParserInterface
     // SecuritySettingsParserInterface
 
     /**
-     * Create a new Default Security Settings Object from array data
-     *
+     * Create a new Default Security Settings Object from array data.
      *
      * @return DefaultSecuritySettings
      */
@@ -22,7 +21,7 @@ class DefaultSecuritySettingsParser implements SecuritySettingsParserInterface
     }
 
     /**
-     * Get a list of supported types
+     * Get a list of supported types.
      *
      * @return array
      */

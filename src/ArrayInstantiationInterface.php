@@ -5,9 +5,9 @@ namespace Raml;
 interface ArrayInstantiationInterface
 {
     /**
-     * Create a new object from an array of data
+     * Create a new object from an array of data.
      *
-     * @param string    $key
+     * @param string $key
      *
      * @return ArrayInstantiationInterface
      */

@@ -8,15 +8,14 @@ namespace Raml\SecurityScheme;
 interface SecuritySettingsParserInterface
 {
     /**
-     * Create a security settings object from an array of data
-     *
+     * Create a security settings object from an array of data.
      *
      * @return object[]
      */
     public function createSecuritySettings(array $data = []);
 
     /**
-     * Returns a list of the compatible types
+     * Returns a list of the compatible types.
      *
      * @return string[]
      */

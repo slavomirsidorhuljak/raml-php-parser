@@ -5,7 +5,7 @@ namespace Raml;
 use Raml\Exception\EmptyBodyException;
 
 /**
- * Method
+ * Method.
  *
  * @see http://raml.org/spec.html#methods
  */
@@ -18,7 +18,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
 
     /**
      * The method type (required)
-     * [GET, POST, PUT, DELETE, PATCH]
+     * [GET, POST, PUT, DELETE, PATCH].
      *
      * @see http://raml.org/spec.html#methods
      *
@@ -27,7 +27,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $type;
 
     /**
-     * The description of the method (optional)
+     * The description of the method (optional).
      *
      * @see http://raml.org/spec.html#description
      *
@@ -36,7 +36,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $description;
 
     /**
-     * Override for the Base Uri Parameters
+     * Override for the Base Uri Parameters.
      *
      * @see http://raml.org/spec.html#base-uri-parameters
      *
@@ -45,7 +45,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $baseUriParameters = [];
 
     /**
-     * A list of non default headers (optional)
+     * A list of non default headers (optional).
      *
      * @see http://raml.org/spec.html#headers
      *
@@ -54,7 +54,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $headers = [];
 
     /**
-     * The supported protocols (default to protocol on baseUrl)
+     * The supported protocols (default to protocol on baseUrl).
      *
      * @see http://raml.org/spec.html#protocols
      *
@@ -63,7 +63,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $protocols = [];
 
     /**
-     * List of query parameters supported by this method
+     * List of query parameters supported by this method.
      *
      * @see http://raml.org/spec.html#query-strings
      *
@@ -72,21 +72,21 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     private $queryParameters = [];
 
     /**
-     * A list of the bodies of this method
+     * A list of the bodies of this method.
      *
      * @var BodyInterface[]
      */
     private $bodyList = [];
 
     /**
-     * A  list of possible responses from this method
+     * A  list of possible responses from this method.
      *
      * @var Response[]
      */
     private $responses = [];
 
     /**
-     * A list of security schemes
+     * A list of security schemes.
      *
      * @var SecurityScheme[]
      */
@@ -100,7 +100,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // ---
 
     /**
-     * Create a new Method from an array
+     * Create a new Method from an array.
      *
      * @param string $type
      */
@@ -114,19 +114,20 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Create a new Method from an array
+     * Create a new Method from an array.
      *
-     * @param string        $method
-     * @param array         $data
-     * [
-     *  body:               ?array
-     *  headers:            ?array
-     *  description:        ?string
-     *  protocols:          ?array
-     *  responses:          ?array
-     *  queryParameters:    ?array
-     * ]
+     * @param string $method
+     * @param array $data
+     *                    [
+     *                    body:               ?array
+     *                    headers:            ?array
+     *                    description:        ?string
+     *                    protocols:          ?array
+     *                    responses:          ?array
+     *                    queryParameters:    ?array
+     *                    ]
      * @param ApiDefinition $apiDefinition
+     *
      * @return Method
      */
     public static function createFromArray($method, array $data = [], ApiDefinition $apiDefinition = null)
@@ -222,7 +223,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get the description
+     * Get the description.
      *
      * @return string
      */
@@ -232,7 +233,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Set the description
+     * Set the description.
      *
      * @param string $description
      */
@@ -244,7 +245,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get the base uri parameters
+     * Get the base uri parameters.
      *
      * @return NamedParameter[]
      */
@@ -254,8 +255,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a new base uri parameter
-     *
+     * Add a new base uri parameter.
      */
     public function addBaseUriParameter(NamedParameter $namedParameter)
     {
@@ -265,7 +265,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Returns the headers
+     * Returns the headers.
      *
      * @return NamedParameter[]
      */
@@ -275,8 +275,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a new header
-     *
+     * Add a new header.
      */
     public function addHeader(NamedParameter $header)
     {
@@ -306,7 +305,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Get the list of support protocols
+     * Get the list of support protocols.
      *
      * @return array
      */
@@ -316,9 +315,10 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Get example by type (application/json, text/plain, ...)
+     * Get example by type (application/json, text/plain, ...).
      *
      * @param string $type
+     *
      * @return string[]
      */
     public function getExampleByType($type)
@@ -327,7 +327,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a supported protocol
+     * Add a supported protocol.
      *
      * @param string $protocol
      *
@@ -347,7 +347,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Gets the query parameters of this method
+     * Gets the query parameters of this method.
      *
      * @return NamedParameter[]
      */
@@ -357,8 +357,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a query parameter
-     *
+     * Add a query parameter.
      */
     public function addQueryParameter(NamedParameter $queryParameter)
     {
@@ -368,13 +367,14 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get the body by type
+     * Get the body by type.
      *
      * @param string $type
-     * @return BodyInterface
      *
      * @throws EmptyBodyException
      * @throws \InvalidArgumentException
+     *
+     * @return BodyInterface
      */
     public function getBodyByType($type)
     {
@@ -397,7 +397,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Get an array of all bodies
+     * Get an array of all bodies.
      *
      * @return BodyInterface[]
      */
@@ -407,8 +407,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a body
-     *
+     * Add a body.
      */
     public function addBody(BodyInterface $body)
     {
@@ -418,7 +417,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get all the responses
+     * Get all the responses.
      *
      * @return Response[]
      */
@@ -428,7 +427,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Get a response by the response code (200, 404,....)
+     * Get a response by the response code (200, 404,....).
      *
      * @param int $responseCode
      *
@@ -440,8 +439,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * Add a response
-     *
+     * Add a response.
      */
     public function addResponse(Response $response)
     {
@@ -451,7 +449,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     // --
 
     /**
-     * Get the list of security schemes
+     * Get the list of security schemes.
      *
      * @return SecurityScheme[]
      */
@@ -461,7 +459,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
     }
 
     /**
-     * @param bool $merge Set to true to merge the security scheme data with the method, or false to not merge it.
+     * @param bool $merge set to true to merge the security scheme data with the method, or false to not merge it
      */
     public function addSecurityScheme(SecurityScheme $securityScheme, $merge = true)
     {
@@ -511,6 +509,7 @@ class Method implements ArrayInstantiationInterface, MessageSchemaInterface
 
     /**
      * @param TraitDefinition $trait
+     *
      * @return self
      */
     public function addTrait($trait)

@@ -15,7 +15,7 @@ class WebFormBody extends NamedParameter implements BodyInterface
     private $namedParameters = [];
 
     /**
-     * List of valid media types
+     * List of valid media types.
      *
      * @var string[]
      */
@@ -25,7 +25,7 @@ class WebFormBody extends NamedParameter implements BodyInterface
     ];
 
     /**
-     * Create a new Query Parameter
+     * Create a new Query Parameter.
      *
      * @param string $mediaType
      *
@@ -41,7 +41,7 @@ class WebFormBody extends NamedParameter implements BodyInterface
     }
 
     /**
-     * Get the media type
+     * Get the media type.
      *
      * @return string
      */
@@ -51,10 +51,11 @@ class WebFormBody extends NamedParameter implements BodyInterface
     }
 
     /**
-     * Create a new WebFormObject from an array
+     * Create a new WebFormObject from an array.
      *
      * @param string $key The valid media type to use as the key
      * @param array $data The array of data to create NamedParameter objects from
+     *
      * @return WebFormBody
      */
     public static function createFromArray($key, array $data = [])
@@ -73,8 +74,7 @@ class WebFormBody extends NamedParameter implements BodyInterface
     }
 
     /**
-     * Add a NamedParameter object to the list
-     *
+     * Add a NamedParameter object to the list.
      */
     public function addParameter(NamedParameter $namedParameter)
     {
@@ -82,12 +82,13 @@ class WebFormBody extends NamedParameter implements BodyInterface
     }
 
     /**
-     * Get a named parameter object by key name
+     * Get a named parameter object by key name.
      *
      * @param string $key The name of the key for the named parameter
-     * @return NamedParameter
      *
      * @throws InvalidKeyException
+     *
+     * @return NamedParameter
      */
     public function getParameter($key)
     {
@@ -99,7 +100,7 @@ class WebFormBody extends NamedParameter implements BodyInterface
     }
 
     /**
-     * Get all NamedParameter objects
+     * Get all NamedParameter objects.
      *
      * @return NamedParameter[]
      */

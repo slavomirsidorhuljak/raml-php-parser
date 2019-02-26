@@ -15,12 +15,12 @@ class DatetimeOnlyType extends Type
     const FORMAT = 'Y-m-d\\TH:i:s';
 
     /**
-    * Create a new DateTimeOnlyType from an array of data
-    *
-    * @param string $name
-    *
-    * @return self
-    */
+     * Create a new DateTimeOnlyType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);

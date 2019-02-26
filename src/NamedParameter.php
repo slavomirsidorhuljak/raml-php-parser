@@ -135,7 +135,7 @@ class NamedParameter implements ArrayInstantiationInterface
     const VAL_NOTENUMVALUE = 13;
 
     /**
-     * Valid types
+     * Valid types.
      *
      * @var string[]
      */
@@ -154,14 +154,14 @@ class NamedParameter implements ArrayInstantiationInterface
     ];
 
     /**
-     * The key of the named parameter (required)
+     * The key of the named parameter (required).
      *
      * @var string
      */
     private $key;
 
     /**
-     * The display name (optional)
+     * The display name (optional).
      *
      * @see http://raml.org/spec.html#displayname
      *
@@ -170,7 +170,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $displayName;
 
     /**
-     * The description of the parameter (optional)
+     * The description of the parameter (optional).
      *
      * @see http://raml.org/spec.html#description
      *
@@ -179,7 +179,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $description;
 
     /**
-     * The primitive type of the parameter (default: string)
+     * The primitive type of the parameter (default: string).
      *
      * @see http://raml.org/spec.html#type
      *
@@ -188,7 +188,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $type = self::TYPE_STRING;
 
     /**
-     * List of valid values for the parameter (optional)
+     * List of valid values for the parameter (optional).
      *
      * @see http://raml.org/spec.html#enum
      *
@@ -197,7 +197,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $enum;
 
     /**
-     * A regular expression pattern for the string to match against (optional)
+     * A regular expression pattern for the string to match against (optional).
      *
      * @see http://raml.org/spec.html#pattern
      *
@@ -206,7 +206,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $validationPattern;
 
     /**
-     * The minimum length for a string (optional)
+     * The minimum length for a string (optional).
      *
      * @see http://raml.org/spec.html#minlength
      *
@@ -215,7 +215,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $minLength;
 
     /**
-     * The maximum length for a string (optional)
+     * The maximum length for a string (optional).
      *
      * @see http://raml.org/spec.html#maxlength
      *
@@ -224,7 +224,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $maxLength;
 
     /**
-     * The minimum for a integer or number (optional)
+     * The minimum for a integer or number (optional).
      *
      * @see http://raml.org/spec.html#minimum
      *
@@ -233,7 +233,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $minimum;
 
     /**
-     * The maximum for a integer or number (optional)
+     * The maximum for a integer or number (optional).
      *
      * @see http://raml.org/spec.html#maximum
      *
@@ -242,7 +242,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $maximum;
 
     /**
-     * An list of examples (optional)
+     * An list of examples (optional).
      *
      * @see http://raml.org/spec.html#example
      *
@@ -251,7 +251,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $examples;
 
     /**
-     * Whether the parameter can be used multiple times (default: false)
+     * Whether the parameter can be used multiple times (default: false).
      *
      * @see http://raml.org/spec.html#repeat
      *
@@ -260,7 +260,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $repeat = false;
 
     /**
-     * If the parameter is required (default: false)
+     * If the parameter is required (default: false).
      *
      * @see http://raml.org/spec.html#required
      *
@@ -269,7 +269,7 @@ class NamedParameter implements ArrayInstantiationInterface
     protected $required = false;
 
     /**
-     * A default value used by the server if not provided
+     * A default value used by the server if not provided.
      *
      * @see http://raml.org/spec.html#default
      *
@@ -278,7 +278,7 @@ class NamedParameter implements ArrayInstantiationInterface
     private $default;
 
     /**
-     * DateTime format (for datetime type only)
+     * DateTime format (for datetime type only).
      *
      * @var string
      */
@@ -287,7 +287,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Create a new Query Parameter
+     * Create a new Query Parameter.
      *
      * @param string $key
      */
@@ -297,7 +297,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Get the query parameter key
+     * Get the query parameter key.
      *
      * @return string
      */
@@ -309,28 +309,28 @@ class NamedParameter implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Create a Query Parameter from an Array
+     * Create a Query Parameter from an Array.
      *
      * @param string $key
      * @param array $data
-     * [
-     *  displayName:        ?string
-     *  description:        ?string
-     *  type:               ?["string","number","integer","date","boolean","file", ...]
-     *  enum:               ?array
-     *  pattern:            ?string
-     *  validationPattern:  ?string
-     *  minLength:          ?integer
-     *  maxLength:          ?integer
-     *  minimum:            ?integer
-     *  maximum:            ?integer
-     *  example:            ?string
-     *  examples:           ?array
-     *  repeat:             ?boolean
-     *  required:           ?boolean
-     *  default:            ?string
-     *  format:             ?string
-     * ]
+     *                    [
+     *                    displayName:        ?string
+     *                    description:        ?string
+     *                    type:               ?["string","number","integer","date","boolean","file", ...]
+     *                    enum:               ?array
+     *                    pattern:            ?string
+     *                    validationPattern:  ?string
+     *                    minLength:          ?integer
+     *                    maxLength:          ?integer
+     *                    minimum:            ?integer
+     *                    maximum:            ?integer
+     *                    example:            ?string
+     *                    examples:           ?array
+     *                    repeat:             ?boolean
+     *                    required:           ?boolean
+     *                    default:            ?string
+     *                    format:             ?string
+     *                    ]
      *
      * @throws \Exception
      *
@@ -417,7 +417,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // ---
 
     /**
-     * Get the display name
+     * Get the display name.
      *
      * @return string
      */
@@ -427,7 +427,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the display name
+     * Set the display name.
      *
      * @param string $displayName
      */
@@ -439,7 +439,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the description
+     * Get the description.
      *
      * @return string
      */
@@ -449,7 +449,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the description
+     * Set the description.
      *
      * @param string $description
      */
@@ -461,7 +461,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the type
+     * Get the type.
      *
      * @return string
      */
@@ -471,7 +471,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the type
+     * Set the type.
      *
      * @param string $type
      *
@@ -489,7 +489,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the allowed values
+     * Get the allowed values.
      *
      * @return array
      */
@@ -499,8 +499,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the allowed values
-     *
+     * Set the allowed values.
      */
     public function setEnum(array $enum)
     {
@@ -510,7 +509,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the pattern regular expression
+     * Get the pattern regular expression.
      *
      * @return string
      */
@@ -520,7 +519,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the pattern regular expression
+     * Set the pattern regular expression.
      *
      * @param string $validationPattern
      */
@@ -532,7 +531,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the minLength
+     * Get the minLength.
      *
      * @return int
      */
@@ -542,7 +541,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set minLength
+     * Set minLength.
      *
      * @param int $minLength
      *
@@ -560,7 +559,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the maxLength
+     * Get the maxLength.
      *
      * @return int
      */
@@ -570,7 +569,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set maxLength
+     * Set maxLength.
      *
      * @param int $maxLength
      *
@@ -588,7 +587,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the minimum
+     * Get the minimum.
      *
      * @return int
      */
@@ -598,7 +597,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set minimum
+     * Set minimum.
      *
      * @param int $minimum
      *
@@ -616,7 +615,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the maximum
+     * Get the maximum.
      *
      * @return int
      */
@@ -626,7 +625,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set maximum
+     * Set maximum.
      *
      * @param int $maximum
      *
@@ -644,7 +643,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the example
+     * Get the example.
      *
      * @param int $position
      *
@@ -656,7 +655,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Get all examples
+     * Get all examples.
      *
      * @return string[]
      */
@@ -666,7 +665,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the example
+     * Set the example.
      *
      * @param string $example
      */
@@ -678,7 +677,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Can the parameter be repeated
+     * Can the parameter be repeated.
      *
      * @return bool
      */
@@ -688,7 +687,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set if the parameter can be repeated
+     * Set if the parameter can be repeated.
      *
      * @param bool $repeat
      */
@@ -700,7 +699,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Is the parameter required
+     * Is the parameter required.
      *
      * @return bool
      */
@@ -710,7 +709,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set if the parameter is required
+     * Set if the parameter is required.
      *
      * @param bool $required
      */
@@ -722,8 +721,7 @@ class NamedParameter implements ArrayInstantiationInterface
     // --
 
     /**
-     * Return the default
-     *
+     * Return the default.
      */
     public function getDefault()
     {
@@ -747,8 +745,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Set the default
-     *
+     * Set the default.
      *
      * @throws \InvalidArgumentException
      */
@@ -795,10 +792,11 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Validate a parameter via RAML specifications
+     * Validate a parameter via RAML specifications.
      *
      * @param mixed $param The value of the parameter to validate
-     * @throws ValidationException The code corresponds to the error that occurred.
+     *
+     * @throws ValidationException the code corresponds to the error that occurred
      */
     public function validate($param)
     {
@@ -842,7 +840,7 @@ class NamedParameter implements ArrayInstantiationInterface
                 /**
                  * Check the length of a string.
                  *
-                 * @link http://raml.org/spec.html#minlength
+                 * @see http://raml.org/spec.html#minlength
                  */
                 $minLength = $this->getMinLength();
                 if (!empty($minLength) && \strlen($param) < $minLength) {
@@ -855,7 +853,7 @@ class NamedParameter implements ArrayInstantiationInterface
                 /**
                  * Check the length of a string.
                  *
-                 * @link http://raml.org/spec.html#maxlength
+                 * @see http://raml.org/spec.html#maxlength
                  */
                 $maxLength = $this->getMaxLength();
                 if (!empty($maxLength) && \strlen($param) > $maxLength) {
@@ -892,7 +890,7 @@ class NamedParameter implements ArrayInstantiationInterface
                 /**
                  * Check the value constraints if specified.
                  *
-                 * @link http://raml.org/spec.html#minimum
+                 * @see http://raml.org/spec.html#minimum
                  */
                 $min = $this->getMinimum();
                 if (!empty($min) && $param < $min) {
@@ -905,7 +903,7 @@ class NamedParameter implements ArrayInstantiationInterface
                 /**
                  * Check the value constraints if specified.
                  *
-                 * @link http://raml.org/spec.html#maximum
+                 * @see http://raml.org/spec.html#maximum
                  */
                 $max = $this->getMaximum();
                 if (!empty($max) && $param > $max) {
@@ -942,7 +940,7 @@ class NamedParameter implements ArrayInstantiationInterface
         /**
          * Validate against the RAML specified pattern if it exists.
          *
-         * @link http://raml.org/spec.html#pattern
+         * @see http://raml.org/spec.html#pattern
          */
         $validationPattern = $this->getValidationPattern();
         if (!empty($validationPattern) &&
@@ -972,7 +970,7 @@ class NamedParameter implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a regex pattern for matching the parameter
+     * Get a regex pattern for matching the parameter.
      *
      * @return string
      */

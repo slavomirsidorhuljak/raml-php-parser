@@ -6,7 +6,7 @@ use Exception;
 use Raml\Exception\InvalidKeyException;
 
 /**
- *  Singleton class used to register all traits in one place
+ *  Singleton class used to register all traits in one place.
  */
 class TraitCollection implements \Iterator
 {
@@ -18,14 +18,14 @@ class TraitCollection implements \Iterator
     private static $instance;
 
     /**
-     * Collection
+     * Collection.
      *
      * @var TraitDefinition[]
      */
     private $collection = [];
 
     /**
-     * Current position
+     * Current position.
      *
      * @var int
      */
@@ -33,7 +33,6 @@ class TraitCollection implements \Iterator
 
     /**
      * prevent initiation from outside, there can be only one!
-     *
      */
     private function __construct()
     {
@@ -95,9 +94,9 @@ class TraitCollection implements \Iterator
     }
 
     /**
-     * Adds a Type to the collection
+     * Adds a Type to the collection.
      *
-     * @param TraitDefinition $traitToAdd Type to add.
+     * @param TraitDefinition $traitToAdd type to add
      */
     public function add(TraitDefinition $traitToAdd)
     {
@@ -110,9 +109,9 @@ class TraitCollection implements \Iterator
     }
 
     /**
-     * Remove given Type from the collection
+     * Remove given Type from the collection.
      *
-     * @param TraitDefinition $traitToRemove Type to remove.
+     * @param TraitDefinition $traitToRemove type to remove
      *
      * @throws Exception
      */
@@ -130,12 +129,13 @@ class TraitCollection implements \Iterator
     }
 
     /**
-     * Retrieves a trait by name
+     * Retrieves a trait by name.
      *
-     * @param string $name Name of the Trait to retrieve.
+     * @param string $name name of the Trait to retrieve
      *
-     * @return TraitDefinition Returns Trait matching given name if found.
-     * @throws Exception When no type is found.
+     * @throws Exception when no type is found
+     *
+     * @return TraitDefinition returns Trait matching given name if found
      */
     public function getTraitByName($name)
     {
@@ -145,7 +145,7 @@ class TraitCollection implements \Iterator
                 $variables = \reset($name);
                 $name = \key($name);
             }
-            /** @var $trait TraitDefinition */
+            /** @var TraitDefinition $trait */
             if ($trait->getName() === $name) {
                 return $trait->parseVariables($variables);
             }
@@ -155,9 +155,9 @@ class TraitCollection implements \Iterator
     }
 
     /**
-     * Returns types in a plain multidimensional array
+     * Returns types in a plain multidimensional array.
      *
-     * @return array Returns plain array.
+     * @return array returns plain array
      */
     public function toArray()
     {
@@ -170,8 +170,7 @@ class TraitCollection implements \Iterator
     }
 
     /**
-     * Clears the TraitCollection of any registered types
-     *
+     * Clears the TraitCollection of any registered types.
      */
     public function clear()
     {

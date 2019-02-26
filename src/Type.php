@@ -6,7 +6,7 @@ use Raml\Types\ObjectType;
 use Raml\Types\TypeValidationError;
 
 /**
- * Type class
+ * Type class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -23,27 +23,26 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     private $parent;
 
     /**
-     * Key used for type
+     * Key used for type.
      *
      * @var string
      */
     private $name;
 
     /**
-     *
      * @var string
      */
     protected $type;
 
     /**
-     * Required
+     * Required.
      *
      * @var bool
      */
     private $required = true;
 
     /**
-     * Raml definition
+     * Raml definition.
      *
      * @var array
      */
@@ -63,9 +62,10 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Create a new Type from an array of data
+     * Create a new Type from an array of data.
      *
      * @param string $name
+     *
      * @return self
      */
     public static function createFromArray($name, array $data = [])
@@ -98,9 +98,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Dumps object to array
+     * Dumps object to array.
      *
-     * @return array Object dumped to array.
+     * @return array object dumped to array
      */
     public function toArray()
     {
@@ -108,7 +108,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Set the value of name
+     * Set the value of name.
      *
      * @param string $name
      *
@@ -122,9 +122,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Get the value of name
+     * Get the value of name.
      *
-     * @return string Returns name property.
+     * @return string returns name property
      */
     public function getName()
     {
@@ -132,7 +132,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Set the value of type
+     * Set the value of type.
      *
      * @param string $type
      *
@@ -146,9 +146,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Get the value of type
+     * Get the value of type.
      *
-     * @return string Returns type property.
+     * @return string returns type property
      */
     public function getType()
     {
@@ -156,9 +156,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Set definition
+     * Set definition.
      *
-     * @param array $data Definition data of type.
+     * @param array $data definition data of type
      */
     public function setDefinition(array $data = [])
     {
@@ -166,9 +166,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Get definition
+     * Get definition.
      *
-     * @return array Returns definition property.
+     * @return array returns definition property
      */
     public function getDefinition()
     {
@@ -176,7 +176,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Get the value of Required
+     * Get the value of Required.
      *
      * @return bool
      */
@@ -186,7 +186,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Set the value of Required
+     * Set the value of Required.
      *
      * @param bool $required
      *
@@ -213,7 +213,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Get the value of Parent
+     * Get the value of Parent.
      *
      * @return ObjectType
      */
@@ -230,9 +230,9 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Returns true when parent property is set
+     * Returns true when parent property is set.
      *
-     * @return bool Returns true when parent exists, false if not.
+     * @return bool returns true when parent exists, false if not
      */
     public function hasParent()
     {
@@ -240,7 +240,7 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Set the value of Parent
+     * Set the value of Parent.
      *
      * @param ObjectType|string $parent
      *
@@ -254,10 +254,11 @@ class Type implements ArrayInstantiationInterface, TypeInterface
     }
 
     /**
-     * Inherit properties from parent (recursively)
+     * Inherit properties from parent (recursively).
      *
-     * @return self Returns the new object with inherited properties.
      * @throws \LogicException
+     *
+     * @return self returns the new object with inherited properties
      */
     public function inheritFromParent()
     {

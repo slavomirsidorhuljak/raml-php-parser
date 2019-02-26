@@ -3,12 +3,12 @@
 namespace Raml\FileLoader;
 
 /**
- * Default file loader
+ * Default file loader.
  */
 class DefaultFileLoader implements FileLoaderInterface
 {
     /**
-     * Load a file from a path and resolve references
+     * Load a file from a path and resolve references.
      *
      * @param string $filePath
      *
@@ -23,7 +23,7 @@ class DefaultFileLoader implements FileLoaderInterface
 
     /**
      * Get the list of supported extensions
-     * Valid for any file type
+     * Valid for any file type.
      *
      * @return string[]
      */

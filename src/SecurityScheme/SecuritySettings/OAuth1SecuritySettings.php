@@ -12,28 +12,28 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     const TYPE = 'OAuth 1.0';
 
     /**
-     * The URI of the Temporary Credential Request endpoint as defined in RFC5849 Section 2.1
+     * The URI of the Temporary Credential Request endpoint as defined in RFC5849 Section 2.1.
      *
      * @var string
      */
     private $tokenCredentialsUri;
 
     /**
-     * The URI of the Resource Owner Authorization endpoint as defined in RFC5849 Section 2.2
+     * The URI of the Resource Owner Authorization endpoint as defined in RFC5849 Section 2.2.
      *
      * @var string
      */
     private $authorizationUri;
 
     /**
-     * The URI of the Token Request endpoint as defined in RFC5849 Section 2.3
+     * The URI of the Token Request endpoint as defined in RFC5849 Section 2.3.
      *
      * @var string
      */
     private $requestTokenUri;
 
     /**
-     * Flesh out the settings
+     * Flesh out the settings.
      *
      * @param SecuritySettingsInterface $sourceSettings
      *
@@ -66,7 +66,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Get the Token Credentials URI
+     * Get the Token Credentials URI.
      *
      * @return string
      */
@@ -76,7 +76,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Set the Token Credentials URI
+     * Set the Token Credentials URI.
      *
      * @param string $tokenCredentialsUri
      */
@@ -86,7 +86,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Get the Request Token URI
+     * Get the Request Token URI.
      *
      * @return string
      */
@@ -96,7 +96,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Set the Request Token URI
+     * Set the Request Token URI.
      *
      * @param string $requestTokenUri
      */
@@ -106,7 +106,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Get the Authorization URI
+     * Get the Authorization URI.
      *
      * @return string
      */
@@ -116,7 +116,7 @@ class OAuth1SecuritySettings implements SecuritySettingsInterface
     }
 
     /**
-     * Set the Authorization URI
+     * Set the Authorization URI.
      *
      * @param string $authorizationUri
      */

@@ -20,17 +20,17 @@ class ResponseValidatorTest extends TestCase
     private $parser;
 
     /**
-     * @var RequestInterface|PHPUnit_Framework_MockObject_MockObject
+     * @var PHPUnit_Framework_MockObject_MockObject|RequestInterface
      */
     private $request;
 
     /**
-     * @var ResponseInterface|PHPUnit_Framework_MockObject_MockObject
+     * @var PHPUnit_Framework_MockObject_MockObject|ResponseInterface
      */
     private $response;
 
     /**
-     * @var UriInterface|PHPUnit_Framework_MockObject_MockObject
+     * @var PHPUnit_Framework_MockObject_MockObject|UriInterface
      */
     private $uri;
 
@@ -47,6 +47,7 @@ class ResponseValidatorTest extends TestCase
 
     /**
      * @param string $fixturePath
+     *
      * @return ResponseValidator
      */
     private function getValidatorForSchema($fixturePath)

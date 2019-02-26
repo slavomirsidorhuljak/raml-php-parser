@@ -25,6 +25,7 @@ class TraitParserHelper
 
     /**
      * @param string $trait
+     *
      * @return string
      */
     private static function applyFunctions($trait, array $values)

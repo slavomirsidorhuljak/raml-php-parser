@@ -11,7 +11,7 @@ use Raml\ValidatorInterface;
 interface SchemaDefinitionInterface extends ValidatorInterface
 {
     /**
-     * Returns the schema as a string
+     * Returns the schema as a string.
      *
      * @return string
      */

@@ -7,14 +7,14 @@ use Raml\Type;
 use Raml\TypeInterface;
 
 /**
- * UnionType class
+ * UnionType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
 class UnionType extends Type
 {
     /**
-     * Possible Types
+     * Possible Types.
      *
      * @var array
      */
@@ -31,7 +31,7 @@ class UnionType extends Type
     private $additionalProperties;
 
     /**
-     * Create a new UnionType from an array of data
+     * Create a new UnionType from an array of data.
      *
      * @param string $name
      *
@@ -56,7 +56,7 @@ class UnionType extends Type
     }
 
     /**
-     * Get the value of Possible Types
+     * Get the value of Possible Types.
      *
      * @return TypeInterface[]
      */
@@ -66,8 +66,7 @@ class UnionType extends Type
     }
 
     /**
-     * Set the value of Possible Types
-     *
+     * Set the value of Possible Types.
      *
      * @return self
      */
@@ -81,7 +80,7 @@ class UnionType extends Type
     }
 
     /**
-     * Set the value of Properties
+     * Set the value of Properties.
      *
      * @return self
      */
@@ -98,7 +97,7 @@ class UnionType extends Type
     }
 
     /**
-     * Get the value of Properties
+     * Get the value of Properties.
      *
      * @return Type[]
      */
@@ -108,10 +107,11 @@ class UnionType extends Type
     }
 
     /**
-     * Returns a property by name
+     * Returns a property by name.
      *
      * @param string $name
-     * @return null|Type
+     *
+     * @return Type|null
      */
     public function getPropertyByName($name)
     {
@@ -128,8 +128,7 @@ class UnionType extends Type
     }
 
     /**
-     * Set the value of Additional Properties
-     *
+     * Set the value of Additional Properties.
      *
      * @return self
      */

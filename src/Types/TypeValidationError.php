@@ -32,6 +32,7 @@ class TypeValidationError
      * @param string $property
      * @param string $pattern
      * @param string $value
+     *
      * @return self
      */
     public static function stringPatternMismatch($property, $pattern, $value)
@@ -45,6 +46,7 @@ class TypeValidationError
 
     /**
      * @param string $message
+     *
      * @return self
      */
     public static function xmlValidationFailed($message)
@@ -54,6 +56,7 @@ class TypeValidationError
 
     /**
      * @param string $message
+     *
      * @return self
      */
     public static function jsonValidationFailed($message)
@@ -63,6 +66,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function missingRequiredProperty($property)
@@ -72,6 +76,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function unexpectedProperty($property)
@@ -81,8 +86,9 @@ class TypeValidationError
 
     /**
      * @param string $property
-     * @param int|float $multiplier
-     * @param int|float $actualValue
+     * @param float|int $multiplier
+     * @param float|int $actualValue
+     *
      * @return self
      */
     public static function isNotMultipleOf($property, $multiplier, $actualValue)
@@ -97,6 +103,7 @@ class TypeValidationError
     /**
      * @param string $property
      * @param string[] $possibleValues
+     *
      * @return self
      */
     public static function unexpectedValue($property, $possibleValues, $actualValue)
@@ -111,6 +118,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function unexpectedValueType($property, $constraint, $actualValue)
@@ -127,6 +135,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function unexpectedArrayValueType($property, $constraint, $actualValue)
@@ -143,6 +152,7 @@ class TypeValidationError
      * @param string $property
      * @param int $minLength
      * @param string $actualValue
+     *
      * @return self
      */
     public static function stringLengthExceedsMinimum($property, $minLength, $actualValue)
@@ -158,6 +168,7 @@ class TypeValidationError
      * @param string $property
      * @param int $maxLength
      * @param string $actualValue
+     *
      * @return self
      */
     public static function stringLengthExceedsMaximum($property, $maxLength, $actualValue)
@@ -171,6 +182,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function valueExceedsMinimum($property, $minValue, $actualValue)
@@ -184,6 +196,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function valueExceedsMaximum($property, $maxValue, $actualValue)
@@ -200,6 +213,7 @@ class TypeValidationError
      * @param int $min
      * @param int $max
      * @param int $actualSize
+     *
      * @return self
      */
     public static function arraySizeValidationFailed($property, $min, $max, $actualSize)
@@ -209,6 +223,7 @@ class TypeValidationError
 
     /**
      * @param string $property
+     *
      * @return self
      */
     public static function unionTypeValidationFailed($property, array $errorsGroupedByTypes)

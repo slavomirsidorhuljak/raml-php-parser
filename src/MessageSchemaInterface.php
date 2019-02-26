@@ -5,20 +5,19 @@ namespace Raml;
 interface MessageSchemaInterface
 {
     /**
-     * Returns the headers
+     * Returns the headers.
      *
      * @return NamedParameter[]
      */
     public function getHeaders();
 
     /**
-     * Add a new header
-     *
+     * Add a new header.
      */
     public function addHeader(NamedParameter $header);
 
     /**
-     * Get the body by type
+     * Get the body by type.
      *
      * @param string $type
      *
@@ -29,15 +28,14 @@ interface MessageSchemaInterface
     public function getBodyByType($type);
 
     /**
-     * Get an array of all bodies
+     * Get an array of all bodies.
      *
      * @return array The array of bodies
      */
     public function getBodies();
 
     /**
-     * Add a body
-     *
+     * Add a body.
      */
     public function addBody(BodyInterface $body);
 }

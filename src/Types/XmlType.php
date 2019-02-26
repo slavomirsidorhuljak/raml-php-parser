@@ -6,25 +6,26 @@ use DOMDocument;
 use Raml\Type;
 
 /**
- * XmlType class
+ * XmlType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
 class XmlType extends Type
 {
     /**
-     * XML schema
+     * XML schema.
      *
      * @var array
      */
     private $xml;
 
     /**
-    * Create a new JsonType from an array of data
-    *
-    * @param string $name
-    * @return self
-    */
+     * Create a new JsonType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);
@@ -35,8 +36,7 @@ class XmlType extends Type
     }
 
     /**
-     * Validate an XML string against the schema
-     *
+     * Validate an XML string against the schema.
      */
     public function validate($value)
     {

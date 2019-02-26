@@ -6,25 +6,26 @@ use JsonSchema\Validator;
 use Raml\Type;
 
 /**
- * JsonType class
+ * JsonType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
 class JsonType extends Type
 {
     /**
-     * Json schema
+     * Json schema.
      *
      * @var array
      */
     private $json;
 
     /**
-    * Create a new JsonType from an array of data
-    *
-    * @param string $name
-    * @return self
-    */
+     * Create a new JsonType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);
@@ -37,8 +38,7 @@ class JsonType extends Type
 
     /**
      * Validate a JSON string against the schema
-     * - Converts the string into a JSON object then uses the JsonSchema Validator to validate
-     *
+     * - Converts the string into a JSON object then uses the JsonSchema Validator to validate.
      */
     public function validate($value)
     {

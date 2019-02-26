@@ -10,7 +10,7 @@ use Raml\Schema\SchemaParserAbstract;
 class JsonSchemaParser extends SchemaParserAbstract
 {
     /**
-     * List of known JSON content types
+     * List of known JSON content types.
      *
      * @var string[]
      */
@@ -20,12 +20,13 @@ class JsonSchemaParser extends SchemaParserAbstract
     ];
 
     /**
-     * Create a new JSON Schema definition from a string
+     * Create a new JSON Schema definition from a string.
      *
      * @param string $schemaString
-     * @return JsonSchemaDefinition
      *
      * @throws InvalidJsonException
+     *
+     * @return JsonSchemaDefinition
      */
     public function createSchemaDefinition($schemaString)
     {

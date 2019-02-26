@@ -20,13 +20,13 @@ use Symfony\Component\Yaml\Tag\TaggedValue;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * Converts a RAML file into a API Documentation tree
+ * Converts a RAML file into a API Documentation tree.
  */
 class Parser
 {
     /**
      * Array of cached files
-     * No point in fetching them twice
+     * No point in fetching them twice.
      *
      * @var array
      */
@@ -43,28 +43,28 @@ class Parser
     private $includedFiles = [];
 
     /**
-     * List of schema parsers, keyed by the supported content type
+     * List of schema parsers, keyed by the supported content type.
      *
      * @var SchemaParserInterface[]
      */
     private $schemaParsers = [];
 
     /**
-     * List of types
+     * List of types.
      *
      * @var TypeInterface[]
      */
     private $types = [];
 
     /**
-     * List of security settings parsers
+     * List of security settings parsers.
      *
      * @var SecuritySettingsParserInterface[]
      */
     private $securitySettingsParsers = [];
 
     /**
-     * List of custom file loaders
+     * List of custom file loaders.
      *
      * @var FileLoaderInterface[]
      */
@@ -78,7 +78,7 @@ class Parser
     /**
      * Create a new parser object
      * - Optionally pass a list of parsers to use
-     * - If null is passed then the default schemaParsers are used
+     * - If null is passed then the default schemaParsers are used.
      *
      * @param SchemaParserInterface[] $schemaParsers
      * @param SecuritySettingsParserInterface[] $securitySettingsParsers
@@ -143,8 +143,7 @@ class Parser
     }
 
     /**
-     * Set the parse configuration
-     *
+     * Set the parse configuration.
      */
     public function setConfiguration(ParseConfiguration $config)
     {
@@ -154,8 +153,7 @@ class Parser
     // ---
 
     /**
-     * Add a new schema parser
-     *
+     * Add a new schema parser.
      */
     public function addSchemaParser(SchemaParserInterface $schemaParser)
     {
@@ -165,8 +163,7 @@ class Parser
     }
 
     /**
-     * Add a new type
-     *
+     * Add a new type.
      */
     public function addType(TypeInterface $type)
     {
@@ -174,8 +171,7 @@ class Parser
     }
 
     /**
-     * Add a new security scheme
-     *
+     * Add a new security scheme.
      */
     public function addSecuritySettingParser(SecuritySettingsParserInterface $securitySettingsParser)
     {
@@ -185,8 +181,7 @@ class Parser
     }
 
     /**
-     * Add a file loader
-     *
+     * Add a file loader.
      */
     public function addFileLoader(FileLoaderInterface $fileLoader)
     {
@@ -198,13 +193,14 @@ class Parser
     // ---
 
     /**
-     * Parse a RAML spec from a file
+     * Parse a RAML spec from a file.
      *
      * @param string $rawFileName
-     * @return ApiDefinition
      *
      * @throws FileNotFoundException
      * @throws RamlParserException
+     *
+     * @return ApiDefinition
      */
     public function parse($rawFileName)
     {
@@ -223,10 +219,11 @@ class Parser
     }
 
     /**
-     * Parse a RAML spec from a string
+     * Parse a RAML spec from a string.
      *
      * @param string $ramlString
      * @param string $rootDir
+     *
      * @return ApiDefinition
      */
     public function parseFromString($ramlString, $rootDir)
@@ -239,13 +236,14 @@ class Parser
     // ---
 
     /**
-     * Parse RAML data
+     * Parse RAML data.
      *
      * @param array $ramlData
      * @param string $rootDir
-     * @return ApiDefinition
      *
      * @throws RamlParserException
+     *
+     * @return ApiDefinition
      */
     private function parseRamlData($ramlData, $rootDir)
     {
@@ -289,10 +287,10 @@ class Parser
     }
 
     /**
-     * Replaces schema into the raml file
+     * Replaces schema into the raml file.
      *
-     * @param  array $array
-     * @param  array $schemas List of available schema definition.
+     * @param array $array
+     * @param array $schemas list of available schema definition
      *
      * @return array
      */
@@ -315,7 +313,7 @@ class Parser
     }
 
     /**
-     * Recurses though resources and replaces schema strings
+     * Recurses though resources and replaces schema strings.
      *
      * @param string $rootDir
      *
@@ -358,6 +356,7 @@ class Parser
 
     /**
      * @param string $data
+     *
      * @return string
      */
     private function getCachedFilePath($data)
@@ -368,7 +367,7 @@ class Parser
     }
 
     /**
-     * Parse the security settings data into an array
+     * Parse the security settings data into an array.
      *
      * @param array $schemesArray
      *
@@ -403,8 +402,7 @@ class Parser
     }
 
     /**
-     * Parse the resource types
-     *
+     * Parse the resource types.
      *
      * @return array
      */
@@ -431,6 +429,7 @@ class Parser
 
     /**
      * @param string $rootDir
+     *
      * @return array
      */
     private function parseLibraries(array $ramlData, $rootDir)
@@ -476,6 +475,7 @@ class Parser
 
     /**
      * @param string $nameSpace
+     *
      * @return array
      */
     private function addNamespacePrefix($nameSpace, array $definition)
@@ -515,7 +515,7 @@ class Parser
     }
 
     /**
-     * Parse the traits
+     * Parse the traits.
      *
      * @param array $ramlData
      *
@@ -551,13 +551,14 @@ class Parser
     }
 
     /**
-     * Parse a RAML or YAML content
+     * Parse a RAML or YAML content.
      *
      * @param string $ramlString
      * @param string $rootDir
-     * @return array
      *
      * @throws \RuntimeException
+     *
+     * @return array
      */
     private function parseRamlString($ramlString, $rootDir)
     {
@@ -583,9 +584,10 @@ class Parser
     }
 
     /**
-     * Convert a yaml string into an array
+     * Convert a yaml string into an array.
      *
      * @param string $fileData
+     *
      * @return array
      */
     private function parseYaml($fileData)
@@ -597,13 +599,14 @@ class Parser
     }
 
     /**
-     * Load and parse a file
+     * Load and parse a file.
      *
      * @param string $fileName
      * @param string $rootDir
-     * @return array
      *
      * @throws FileNotFoundException
+     *
+     * @return array
      */
     private function loadAndParseFile($fileName, $rootDir)
     {
@@ -662,10 +665,11 @@ class Parser
     }
 
     /**
-     * Recurse through the structure and load includes
+     * Recurse through the structure and load includes.
      *
      * @param array|string|TaggedValue $structure
      * @param string $rootDir
+     *
      * @return array|string|TaggedValue
      */
     private function includeAndParseFiles($structure, $rootDir)
@@ -691,11 +695,12 @@ class Parser
     }
 
     /**
-     * Insert the traits into the RAML file
+     * Insert the traits into the RAML file.
      *
-     * @param string|array $raml
+     * @param array|string $raml
      * @param string $path
      * @param string $name
+     *
      * @return array|string
      */
     private function replaceTraits($raml, array $traits, $path, $name)
@@ -743,13 +748,14 @@ class Parser
     }
 
     /**
-     * Insert the types into the RAML file
+     * Insert the types into the RAML file.
      *
-     * @param string|array $raml
+     * @param array|string $raml
      * @param array $types
      * @param string $path
      * @param string $name
      * @param string|null $parentKey
+     *
      * @return array
      */
     private function replaceTypes($raml, $types, $path, $name, $parentKey = null)
@@ -790,7 +796,7 @@ class Parser
     }
 
     /**
-     * Add trait/type variables
+     * Add trait/type variables.
      *
      * @return array
      */

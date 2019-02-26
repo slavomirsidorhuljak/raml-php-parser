@@ -11,15 +11,15 @@ class OAuth2SecuritySettingsParser implements SecuritySettingsParserInterface
     // SecuritySettingsParserInterface
 
     /**
-     * Create a new OAuth2 Security Settings Object from array data
+     * Create a new OAuth2 Security Settings Object from array data.
      *
      * @param array $data
-     * [
-     *  authorizationUri:       ?string
-     *  accessTokenUri:         ?string
-     *  authorizationGrants:    ?string[]
-     *  scopes:                 ?string[]
-     * ]
+     *                    [
+     *                    authorizationUri:       ?string
+     *                    accessTokenUri:         ?string
+     *                    authorizationGrants:    ?string[]
+     *                    scopes:                 ?string[]
+     *                    ]
      *
      * @return OAuth2SecuritySettings
      */
@@ -29,7 +29,7 @@ class OAuth2SecuritySettingsParser implements SecuritySettingsParserInterface
     }
 
     /**
-     * Get a list of supported types
+     * Get a list of supported types.
      *
      * @return array
      */

@@ -8,14 +8,14 @@ use Raml\NamedParameter;
 use Raml\Response;
 
 /**
- * A description of a security scheme
+ * A description of a security scheme.
  *
  * @see http://raml.org/spec.html
  */
 class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
 {
     /**
-     * A list of non default headers (optional)
+     * A list of non default headers (optional).
      *
      * @see http://raml.org/spec.html#headers
      *
@@ -24,7 +24,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     private $headers = [];
 
     /**
-     * List of query parameters supported by this method
+     * List of query parameters supported by this method.
      *
      * @see http://raml.org/spec.html#query-strings
      *
@@ -33,29 +33,29 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     private $queryParameters = [];
 
     /**
-     * A  list of possible responses from this method
+     * A  list of possible responses from this method.
      *
      * @var Response[]
      */
     private $responses = [];
 
     /**
-     * A list of the bodies of this method
+     * A list of the bodies of this method.
      *
      * @var BodyInterface[]
      */
     private $bodyList = [];
 
     /**
-     * Create a new SecuritySchemeDescribedBy from an array of data
+     * Create a new SecuritySchemeDescribedBy from an array of data.
      *
-     * @param string    $key
-     * @param array     $data
-     * [
-     *  headers:            ?array
-     *  queryParameters:    ?array
-     *  responses:          ?array
-     * ]
+     * @param string $key
+     * @param array $data
+     *                    [
+     *                    headers:            ?array
+     *                    queryParameters:    ?array
+     *                    responses:          ?array
+     *                    ]
      *
      * @return SecuritySchemeDescribedBy
      */
@@ -99,7 +99,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get the body by type
+     * Get the body by type.
      *
      * @param string $type
      *
@@ -117,7 +117,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Get an array of all bodies
+     * Get an array of all bodies.
      *
      * @return array The array of bodies
      */
@@ -127,8 +127,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a body
-     *
+     * Add a body.
      */
     public function addBody(BodyInterface $body)
     {
@@ -136,7 +135,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Returns the headers
+     * Returns the headers.
      *
      * @return NamedParameter[]
      */
@@ -146,8 +145,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a new header
-     *
+     * Add a new header.
      */
     public function addHeader(NamedParameter $header)
     {
@@ -157,7 +155,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     // --
 
     /**
-     * Gets the query parameters of this method
+     * Gets the query parameters of this method.
      *
      * @return NamedParameter[]
      */
@@ -167,8 +165,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a query parameter
-     *
+     * Add a query parameter.
      */
     public function addQueryParameter(NamedParameter $queryParameter)
     {
@@ -178,7 +175,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     // --
 
     /**
-     * Get all the responses
+     * Get all the responses.
      *
      * @return Response[]
      */
@@ -188,7 +185,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Get a response by the response code (200, 404,....)
+     * Get a response by the response code (200, 404,....).
      *
      * @param int $responseCode
      *
@@ -200,8 +197,7 @@ class SecuritySchemeDescribedBy implements ArrayInstantiationInterface
     }
 
     /**
-     * Add a response
-     *
+     * Add a response.
      */
     public function addResponse(Response $response)
     {

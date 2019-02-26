@@ -8,7 +8,7 @@ namespace Raml\SecurityScheme;
 interface SecuritySettingsInterface
 {
     /**
-     * Create a security settings object from an array of data
+     * Create a security settings object from an array of data.
      *
      * @param SecuritySettingsInterface $sourceSettings
      *

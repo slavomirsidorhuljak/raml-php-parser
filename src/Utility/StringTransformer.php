@@ -47,10 +47,10 @@ class StringTransformer
     ];
 
     /**
-     * Applies given function on string
+     * Applies given function on string.
      *
-     * @param string $string Input string, accepts camelcase, pascalcase, snakecase and hyphencase.
-     * @param int $convertTo Type of conversion to apply (use constants).
+     * @param string $string input string, accepts camelcase, pascalcase, snakecase and hyphencase
+     * @param int $convertTo type of conversion to apply (use constants)
      *
      * @return string Returns the converted string
      */

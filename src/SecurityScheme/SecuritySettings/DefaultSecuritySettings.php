@@ -7,21 +7,21 @@ use Raml\SecurityScheme\SecuritySettingsInterface;
 class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
 {
     /**
-     * Supports all types
+     * Supports all types.
      *
      * @var string
      */
     const TYPE = '*';
 
     /**
-     * The security settings
+     * The security settings.
      *
      * @var array
      */
     private $settings = [];
 
     /**
-     * Flesh out the settings
+     * Flesh out the settings.
      *
      * @param SecuritySettingsInterface $sourceSettings
      *
@@ -43,8 +43,7 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Merge new settings into the current settings
-     *
+     * Merge new settings into the current settings.
      */
     public function mergeSettings(array $newSettings)
     {
@@ -52,9 +51,9 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Sets a settings value
-     * @link http://php.net/manual/en/arrayaccess.offsetset.php
+     * Sets a settings value.
      *
+     * @see http://php.net/manual/en/arrayaccess.offsetset.php
      */
     public function offsetSet($offset, $value)
     {
@@ -66,9 +65,9 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Check if a settings value exists
-     * @link http://php.net/manual/en/arrayaccess.offsetexists.php
+     * Check if a settings value exists.
      *
+     * @see http://php.net/manual/en/arrayaccess.offsetexists.php
      *
      * @return bool
      */
@@ -78,9 +77,9 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Delete a settings value
-     * @link http://php.net/manual/en/arrayaccess.offsetunset.php
+     * Delete a settings value.
      *
+     * @see http://php.net/manual/en/arrayaccess.offsetunset.php
      */
     public function offsetUnset($offset)
     {
@@ -88,10 +87,9 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Get a single settings value
-     * @link http://php.net/manual/en/arrayaccess.offsetget.php
+     * Get a single settings value.
      *
-     *
+     * @see http://php.net/manual/en/arrayaccess.offsetget.php
      */
     public function offsetGet($offset)
     {
@@ -99,7 +97,7 @@ class DefaultSecuritySettings implements SecuritySettingsInterface, \ArrayAccess
     }
 
     /**
-     * Get the array of settings data
+     * Get the array of settings data.
      *
      * @return array
      */

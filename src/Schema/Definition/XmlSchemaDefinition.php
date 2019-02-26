@@ -9,7 +9,7 @@ use Raml\Types\TypeValidationError;
 class XmlSchemaDefinition implements SchemaDefinitionInterface
 {
     /**
-     * The XML schema
+     * The XML schema.
      *
      * @var string
      */
@@ -20,7 +20,7 @@ class XmlSchemaDefinition implements SchemaDefinitionInterface
     // --
 
     /**
-     * Create an XML Schema definition
+     * Create an XML Schema definition.
      *
      * @param string $xml
      */
@@ -30,7 +30,7 @@ class XmlSchemaDefinition implements SchemaDefinitionInterface
     }
 
     /**
-     * Returns the XML schema as a string
+     * Returns the XML schema as a string.
      *
      * @return string
      */
@@ -43,8 +43,7 @@ class XmlSchemaDefinition implements SchemaDefinitionInterface
     // SchemaDefinitionInterface
 
     /**
-     * Validate an XML string against the schema
-     *
+     * Validate an XML string against the schema.
      *
      * @throws \Exception
      */

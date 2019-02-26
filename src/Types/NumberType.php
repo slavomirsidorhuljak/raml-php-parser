@@ -5,7 +5,7 @@ namespace Raml\Types;
 use Raml\Type;
 
 /**
- * NumberType class
+ * NumberType class.
  *
  * @author Melvin Loos <m.loos@infopact.nl>
  */
@@ -26,7 +26,7 @@ class NumberType extends Type
     private $maximum;
 
     /**
-     * The format of the value. The value MUST be one of the following: int32, int64, int, long, float, double, int16, int8
+     * The format of the value. The value MUST be one of the following: int32, int64, int, long, float, double, int16, int8.
      *
      * @var string
      */
@@ -40,12 +40,12 @@ class NumberType extends Type
     private $multipleOf;
 
     /**
-    * Create a new NumberType from an array of data
-    *
-    * @param string    $name
-    *
-    * @return NumberType
-    */
+     * Create a new NumberType from an array of data.
+     *
+     * @param string $name
+     *
+     * @return NumberType
+     */
     public static function createFromArray($name, array $data = [])
     {
         $type = parent::createFromArray($name, $data);
@@ -76,7 +76,7 @@ class NumberType extends Type
     }
 
     /**
-     * Get the value of Minimum
+     * Get the value of Minimum.
      *
      * @return int
      */
@@ -86,7 +86,7 @@ class NumberType extends Type
     }
 
     /**
-     * Set the value of Minimum
+     * Set the value of Minimum.
      *
      * @param int $minimum
      *
@@ -100,7 +100,7 @@ class NumberType extends Type
     }
 
     /**
-     * Get the value of Maximum
+     * Get the value of Maximum.
      *
      * @return int
      */
@@ -110,7 +110,7 @@ class NumberType extends Type
     }
 
     /**
-     * Set the value of Maximum
+     * Set the value of Maximum.
      *
      * @param int $maximum
      *
@@ -124,7 +124,7 @@ class NumberType extends Type
     }
 
     /**
-     * Get the value of Format
+     * Get the value of Format.
      *
      * @return string
      */
@@ -134,12 +134,13 @@ class NumberType extends Type
     }
 
     /**
-     * Set the value of Format
+     * Set the value of Format.
      *
      * @param string $format
      *
+     * @throws \Exception thrown when given format is not any of allowed types
+     *
      * @return self
-     * @throws \Exception Thrown when given format is not any of allowed types.
      */
     public function setFormat($format)
     {
@@ -152,7 +153,7 @@ class NumberType extends Type
     }
 
     /**
-     * Get the value of Multiple Of
+     * Get the value of Multiple Of.
      *
      * @return int
      */
@@ -162,7 +163,7 @@ class NumberType extends Type
     }
 
     /**
-     * Set the value of Multiple Of
+     * Set the value of Multiple Of.
      *
      * @param int $multipleOf
      *

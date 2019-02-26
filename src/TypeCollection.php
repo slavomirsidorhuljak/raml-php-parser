@@ -5,7 +5,7 @@ namespace Raml;
 use Raml\Types\ObjectType;
 
 /**
- * Singleton class used to register all types in one place
+ * Singleton class used to register all types in one place.
  */
 class TypeCollection implements \Iterator
 {
@@ -17,21 +17,21 @@ class TypeCollection implements \Iterator
     private static $instance;
 
     /**
-     * Collection
+     * Collection.
      *
      * @var TypeInterface[]
      */
     private $collection = [];
 
     /**
-     * Current position
+     * Current position.
      *
      * @var string
      */
     private $position = 0;
 
     /**
-     * Types which need to inherit properties from their parent
+     * Types which need to inherit properties from their parent.
      *
      * @var ObjectType[]
      */
@@ -50,7 +50,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function current()
     {
@@ -58,7 +58,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function key()
     {
@@ -66,7 +66,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function next()
     {
@@ -74,7 +74,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function rewind()
     {
@@ -82,7 +82,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function valid()
     {
@@ -90,9 +90,9 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Adds a Type to the collection
+     * Adds a Type to the collection.
      *
-     * @param TypeInterface $type Type to add.
+     * @param TypeInterface $type type to add
      */
     public function add(TypeInterface $type)
     {
@@ -100,10 +100,11 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Remove given Type from the collection
+     * Remove given Type from the collection.
      *
-     * @param TypeInterface $typeToRemove Type to remove.
-     * @throws \RuntimeException When no type is found.
+     * @param TypeInterface $typeToRemove type to remove
+     *
+     * @throws \RuntimeException when no type is found
      */
     public function remove(TypeInterface $typeToRemove)
     {
@@ -119,17 +120,18 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Retrieves a type by name
+     * Retrieves a type by name.
      *
-     * @param string $name Name of the Type to retrieve.
-     * @return TypeInterface Returns Type matching given name if found.
+     * @param string $name name of the Type to retrieve
      *
-     * @throws \RuntimeException When no type is found.
+     * @throws \RuntimeException when no type is found
+     *
+     * @return TypeInterface returns Type matching given name if found
      */
     public function getTypeByName($name)
     {
         foreach ($this->collection as $type) {
-            /** @var $type TypeInterface */
+            /** @var TypeInterface $type */
             if ($type->getName() === $name) {
                 return $type;
             }
@@ -140,6 +142,7 @@ class TypeCollection implements \Iterator
 
     /**
      * @param string $name
+     *
      * @return bool
      */
     public function hasTypeByName($name)
@@ -152,7 +155,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Applies inheritance on all types that have a parent
+     * Applies inheritance on all types that have a parent.
      */
     public function applyInheritance()
     {
@@ -164,9 +167,10 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Adds a Type to the list of typesWithInheritance
+     * Adds a Type to the list of typesWithInheritance.
      *
-     * @param ObjectType $type Type to add.
+     * @param ObjectType $type type to add
+     *
      * @return self
      */
     public function addTypeWithInheritance(ObjectType $type)
@@ -177,9 +181,9 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Returns types in a plain multidimensional array
+     * Returns types in a plain multidimensional array.
      *
-     * @return array Returns plain array.
+     * @return array returns plain array
      */
     public function toArray()
     {
@@ -192,7 +196,7 @@ class TypeCollection implements \Iterator
     }
 
     /**
-     * Clears the TypeCollection of any registered types
+     * Clears the TypeCollection of any registered types.
      */
     public function clear()
     {
